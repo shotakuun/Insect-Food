@@ -22,6 +22,7 @@ group :development, :test do
   gem 'annotate'
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'irbtools', require: 'irbtools/binding'
 end
 
 group :development do
