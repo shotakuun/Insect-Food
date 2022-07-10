@@ -1,15 +1,17 @@
 FROM ruby:3.0.3
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
-    && apt-get update -qq \
-    && apt-get install -y nodejs yarn vim
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs
+RUN npm install --global yarn vim
+
+RUN rm -rf /var/lib/apt/lists/*
 WORKDIR /myapp
 COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install
-COPY . /myapp
+RUN yarn install --check-files
+RUN bundle exec rails webpacker:compile
 RUN mkdir -p tmp/sockets
 RUN mkdir -p tmp/pids
+COPY . /myapp
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
