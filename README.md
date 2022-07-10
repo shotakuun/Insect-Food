@@ -62,3 +62,11 @@
 ---
 
 https://www.figma.com/file/RAZ9kzPk1hMx15SATlcLHJ/Untitled
+
+</br>
+
+### **インフラ図：**
+
+---
+
+[![Image from Gyazo](https://i.gyazo.com/5f74c5862f2b6e71d94ec429c1b8f64d.jpg)](https://gyazo.com/5f74c5862f2b6e71d94ec429c1b8f64d)
