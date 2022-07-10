@@ -69,4 +69,29 @@ https://www.figma.com/file/RAZ9kzPk1hMx15SATlcLHJ/Untitled
 
 ---
 
-[![Image from Gyazo](https://i.gyazo.com/5f74c5862f2b6e71d94ec429c1b8f64d.jpg)](https://gyazo.com/5f74c5862f2b6e71d94ec429c1b8f64d)
+[![Image from Gyazo](https://i.gyazo.com/869d736d1e697d6fa1956da395cbff6b.png)](https://gyazo.com/869d736d1e697d6fa1956da395cbff6b)
+
+### **使用技術：**
+
+---
+
+**バックエンド**
+- Ruby 3.0.3
+- Rails 6.1.6
+- Rspec 5.0.0
+
+**主な使用gem**
+- rubocop
+- slim-rails
+
+**インフラ**
+- docker
+- nginx
+- github actions
+- Amazon S3
+- Amazon Route53
+- Amazon RDS
+- Amazon EC2
+- Amazon CloudFront
+- AWS Certificate Manager
+- Elastic Load Balancing
