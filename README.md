@@ -1,6 +1,6 @@
-### **サービス名: Insect-Food**
+[![Test and Deploy](https://github.com/Masaaki618/Insect-Food/actions/workflows/test_deploy.yml/badge.svg)](https://github.com/Masaaki618/Insect-Food/actions/workflows/test_deploy.yml)
 
----
+# Insect-Food
 
 ### **サービスの概要:**
 
