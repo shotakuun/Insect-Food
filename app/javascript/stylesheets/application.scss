@@ -1,1 +1,8 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+.top-header {
+  background-color: blue;
+  .nav-font-size {
+    font-size: 16px;
+  }
+}
