@@ -18,7 +18,7 @@ header {
   height: 600px;
   position: relative;
   .top-header {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.55);
     width: 100%;
     height: 600px;
   }
@@ -51,10 +51,17 @@ header {
 }
 
 .btn-blue {
-  @include btn-info(#0D6EFD);
+  @include btn-info(#0d6efd);
 }
 
 .btn-red {
-  @include btn-info(#DD3444);
+  @include btn-info(#dd3444);
 }
 //sectionエリア
+
+//footerエリア
+footer {
+  background-color: #876445;
+}
+
+//footerエリア
