@@ -44,4 +44,12 @@
             100%が可食部となっており、廃棄する箇所が少ないといった
             観点からも、環境への負荷が少ないと考えられています。
     .border.my-5
+    .text-center
+      h1.mb-5 気になる虫を探してみよう
+    .row.justify-content-center.mb-5
 
+      .col-3.text-center.layer-eria.position-relative
+        = link_to '食べられる虫を見る', root_path, class: 'nav-link border p-3 rounded-pill bg-primary text-light btn-blue'
+
+      .col-3.text-center.position-relative.p-0
+        = link_to '虫診断を始める', root_path, class: 'nav-link border p-3 rounded-pill bg-danger text-light btn-red'

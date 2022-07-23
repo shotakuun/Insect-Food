@@ -1,3 +1,15 @@
+@mixin btn-info($color) {
+  position: relative;
+  -webkit-transition: none;
+  transition: none;
+  text-decoration: none !important;
+  box-shadow: 0 3px 0 $color;
+  &:hover {
+    top: 3px;
+    box-shadow: none;
+  }
+}
+
 //headerエリア
 header {
   background-image: url("../../assets/images/istockphoto-1059673070-1024x1024.jpg");
@@ -28,9 +40,21 @@ header {
 //headerエリア
 
 //sectionエリア
-.insect-p{
-  p{
+.insect-p {
+  p {
     font-size: 18px;
   }
+}
+
+.layer-eria {
+  margin-right: 100px;
+}
+
+.btn-blue {
+  @include btn-info(#0D6EFD);
+}
+
+.btn-red {
+  @include btn-info(#DD3444);
 }
 //sectionエリア
