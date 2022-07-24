@@ -21,7 +21,7 @@ services:
     ports:
       - 80:80
     depends_on:
-      - rail
+      - rails
 volumes:
   node_modules:
   public-data:
