@@ -10,3 +10,5 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = yield
+    - if Rails.env.development?
+      = debug(params)

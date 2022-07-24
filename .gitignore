@@ -35,4 +35,7 @@
 yarn-debug.log*
 .yarn-integrity
 .env
+.DS_store
+app/assets/.DS_Store
+app/assets/images/.DS_Store
 /tags
