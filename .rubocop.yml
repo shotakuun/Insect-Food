@@ -1,0 +1,29 @@
+Style/Documentation:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - tmp/**/*
+    - vendor/bundle/**/*
+    - Rakefile
+    - config.ru
+    - lib/*
+    - bin/**/*
+    - db/**/*
+    - Gemfile
+    - test/**/*
+    - node_modules/**/*
+    - config/application.rb
+    - config/environments/*
+  NewCops:
+    enable
+
+Metrics/BlockLength:
+  Max: 100
+
+require:
+  - rubocop/rspec/focused
+
+RSpec/Focused:
+  Enabled: true
