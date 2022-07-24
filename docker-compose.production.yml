@@ -1,15 +1,5 @@
 version: "3"
 services:
-  db:
-    image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
-    volumes:
-      - ./tmp/db:/var/lib/mysql
-    environment:
-      TZ: Asia/Tokyo
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-    ports:
-      - 3306:3306
   rails:
     build: .
     command: bundle exec puma -C config/puma.rb -e production
@@ -20,8 +10,6 @@ services:
       - /myapp/node_modules
     ports:
       - "3000:3000"
-    depends_on:
-      - db
     environment:
       - RAILS_SERVE_STATIC_FILES= true
   web:
