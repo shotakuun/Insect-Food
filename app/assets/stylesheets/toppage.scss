@@ -18,6 +18,11 @@ header {
   height: 600px;
   position: relative;
   overflow: auto;
+  .text-decoration-none {
+    &:hover {
+      text-decoration-line: none;
+    }
+  }
   .top-header {
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.55);
@@ -71,7 +76,7 @@ header {
   @include btn-info(#dd3444);
 }
 
-.circle{
+.circle {
   border-radius: 50px;
 }
 //sectionエリア
