@@ -32,6 +32,7 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
   gem 'rubocop-rspec-focused', require: false
+  gem 'faker'
 end
 
 group :development do

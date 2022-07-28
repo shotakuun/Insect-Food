@@ -121,6 +121,8 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     fancy_irb (1.4.3)
       paint (>= 0.9, < 3.0)
       unicode-display_width (>= 1.1)
@@ -398,6 +400,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   dotenv-rails
   factory_bot_rails
+  faker
   html2slim
   irbtools
   jbuilder (~> 2.7)
