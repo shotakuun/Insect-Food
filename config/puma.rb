@@ -9,6 +9,6 @@ plugin :tmp_restart
 app_root = File.expand_path('..', __dir__)
 bind "unix://#{app_root}/tmp/sockets/puma.sock"
 
-unless ENV.fetch("RAILS_ENV", "development") == "development"
+unless ENV.fetch('RAILS_ENV', 'development') == 'development'
   stdout_redirect "#{app_root}/log/puma.stdout.log", "#{app_root}/log/puma.stderr.log", true
 end
