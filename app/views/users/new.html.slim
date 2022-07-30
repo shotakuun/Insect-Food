@@ -1,16 +1,16 @@
-h1 新規登録
-script
-= form_with model: @user, url: sign_up_path, local: true do |f|
-  = f.label :name
-  = f.text_field :name
-
-  = f.label :email
-  = f.text_field :email
-
-  = f.label :password
-  = f.password_field :password
-
-  = f.label :password_confirmation
-  = f.password_field :password_confirmation
-
-  = f.submit
+.form-wrapper
+  h3 新規登録
+  = form_with model: @user, url: sign_up_path, local: true do |f|
+    .form-item
+      = f.text_field :name, placeholder: 'ニックネーム'
+    .form-item
+      = f.text_field :email,  placeholder: 'メールアドレス'
+    .form-item
+      = f.password_field :password, placeholder: 'パスワード'
+    .form-item
+      = f.password_field :password_confirmation, placeholder:'パスワード確認'
+    .button-panel
+      = f.submit class: 'submit-btn'
+  .form-footer
+    p
+      = link_to 'ログインはこちらから', login_path
