@@ -15,7 +15,6 @@ gem 'dotenv-rails'
 gem "slim-rails"
 gem "html2slim"
 gem 'bootstrap', '~> 4.1.1'
-gem 'jquery-rails'
 gem 'sorcery'
 gem 'rails-i18n'
 
