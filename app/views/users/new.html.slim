@@ -2,15 +2,27 @@
   h3 新規登録
   = form_with model: @user, url: sign_up_path, local: true do |f|
     .form-item
-      = f.text_field :name, placeholder: 'ニックネーム'
+      = f.text_field :name, placeholder: 'ニックネーム', required: true, minlength:"3", maxlenght:'255'
     .form-item
-      = f.text_field :email,  placeholder: 'メールアドレス'
+      = f.email_field:email,  placeholder: 'メールアドレス', required: true, maxlenght:'255'
     .form-item
-      = f.password_field :password, placeholder: 'パスワード'
+      = f.password_field :password, placeholder: 'パスワード', required: true, minlength:"3", maxlenght:'255', id:'password'
     .form-item
-      = f.password_field :password_confirmation, placeholder:'パスワード確認'
+      = f.password_field :password_confirmation, placeholder:'パスワード確認', required: true, oninput:"CheckPasswordConfirmation(this)"
     .button-panel
       = f.submit class: 'submit-btn'
   .form-footer
     p
       = link_to 'ログインはこちらから', login_path
+
+  script
+    |
+      function CheckPasswordConfirmation(password_confirmation){
+        const val1 = document.getElementById("password").value
+        const val2 = password_confirmation.value
+        if(val1 != val2){
+          password_confirmation.setCustomValidity("入力値が一致しません。");
+        }else{
+          password_confirmation.setCustomValidity("");
+        }
+      }

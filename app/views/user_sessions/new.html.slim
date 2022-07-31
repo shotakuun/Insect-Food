@@ -2,9 +2,9 @@
   h3 ログイン
   = form_with url: login_path, method: :post do |f|
     .form-item
-      = f.text_field :email, placeholder: 'メールアドレス'
+      = f.text_field :email, placeholder: 'メールアドレス', required: true
     .form-item
-      = f.password_field :password, placeholder: 'パスワード'
+      = f.password_field :password, placeholder: 'パスワード', required: true
     .button-panel
       = f.submit 'ログイン',class: 'submit-btn'
   .form-footer
