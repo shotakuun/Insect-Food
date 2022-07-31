@@ -5,9 +5,10 @@ services:
     command: bundle exec puma -C config/puma.rb -e production
     volumes:
       - .:/myapp
+      - bundle:/usr/local/bundle
       - tmp-data:/myapp/tmp
       - log-data:/myapp/log
-      - /myapp/node_modules
+      - node_modules:/myapp/node_modules
     ports:
       - "3000:3000"
     environment:
@@ -27,3 +28,4 @@ volumes:
   public-data:
   tmp-data:
   log-data:
+  bundle:
