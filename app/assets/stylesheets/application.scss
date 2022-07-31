@@ -1,2 +1,51 @@
 @import "bootstrap";
 @import "toppage";
+@import "nav";
+@import "login_create";
+@import "flash";
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+//sectionエリア
+.insect-p {
+  p {
+    font-size: 18px;
+  }
+}
+
+.layer-eria {
+  margin-right: 100px;
+}
+
+.btn-blue {
+  @include btn-info(#0d6efd);
+}
+
+.btn-red {
+  @include btn-info(#dd3444);
+}
+
+.circle {
+  border-radius: 50px;
+}
+//sectionエリア
+
+//footerエリア
+footer {
+  position: sticky;
+  top: 100vh;
+  background-color: #876445;
+  .icon {
+    line-height: 40px;
+  }
+  left: 0;
+}
+//footerエリア

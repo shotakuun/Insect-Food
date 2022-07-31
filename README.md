@@ -2,6 +2,8 @@
 
 # Insect-Food
 
+https://insect-food.jp/
+
 ### **サービスの概要:**
 
 ---
@@ -9,7 +11,7 @@
 本サービスは昆虫食を初めて食べる人に向けたサービスです。</br>
 昆虫と言っても小さな虫から大きめの虫まで大小様々で</br>
 見た目による食べれる食べれないがハッキリと出るのが昆虫食だと思っています。</br>
-ユーザーに5問質問を答えてもらい結果に応じておすすめの虫と</br>
+ユーザーに 5 問質問を答えてもらい結果に応じておすすめの虫と</br>
 昆虫食初級者か上級者なのかを教えてくれるアプリになります。
 
 ### **背景：**
@@ -63,33 +65,43 @@
 
 https://www.figma.com/file/RAZ9kzPk1hMx15SATlcLHJ/Untitled
 
-</br>
+### **ER 図：（仮）**
+
+---
+
+[![Image from Gyazo](https://i.gyazo.com/b74ab693a798edc33c956f2abc5a7028.png)](https://gyazo.com/b74ab693a798edc33c956f2abc5a7028)
 
 ### **インフラ図：**
 
 ---
 
-[![Image from Gyazo](https://i.gyazo.com/869d736d1e697d6fa1956da395cbff6b.png)](https://gyazo.com/869d736d1e697d6fa1956da395cbff6b)
+[![Image from Gyazo](https://i.gyazo.com/9e159e7cbbd90e21eb83c36a6397b9d9.png)](https://gyazo.com/9e159e7cbbd90e21eb83c36a6397b9d9)
 
 ### **使用技術：**
 
 ---
 
 **バックエンド**
+
 - Ruby 3.0.3
 - Rails 6.1.6
 
-**主な使用gem**
+**主な使用 gem**
+
 - rubocop
 - slim-rails
 
 **テスト**
+
 - rspec
 
-**インフラ**
-- docker
-- nginx
+**ci/cd**
+
 - github actions
+
+**インフラ**
+
+- docker
 - Amazon S3
 - Amazon Route53
 - Amazon RDS

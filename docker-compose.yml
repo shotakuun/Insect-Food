@@ -10,6 +10,23 @@ services:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
     ports:
       - 3306:3306
+  rails:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/myapp
+      - bundle:/usr/local/bundle
+      - tmp-data:/myapp/tmp
+      - log-data:/myapp/log
+      - node_modules:/myapp/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: webpacker
   webpacker:
     build: .
     volumes:
@@ -20,23 +37,8 @@ services:
       WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
     ports:
       - "3035:3035"
-  rails:
-    build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
-    volumes:
-      - .:/myapp
-      - tmp-data:/myapp/tmp
-      - log-data:/myapp/log
-      - /myapp/node_modules
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-    environment:
-      WEBPACKER_DEV_SERVER_HOST: webpacker
 volumes:
   node_modules:
   tmp-data:
   log-data:
   bundle:
-    driver: local

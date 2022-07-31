@@ -16,8 +16,7 @@ AllCops:
     - node_modules/**/*
     - config/application.rb
     - config/environments/*
-  NewCops:
-    enable
+  NewCops: enable
 
 Metrics/BlockLength:
   Max: 100
@@ -27,3 +26,6 @@ require:
 
 RSpec/Focused:
   Enabled: true
+
+LineLength:
+  Max: 140
