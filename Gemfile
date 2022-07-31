@@ -24,7 +24,6 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'annotate'
   gem 'pry-byebug'
-  gem 'pry-rails'
   gem 'irbtools', require: 'irbtools/binding'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop', require: false
