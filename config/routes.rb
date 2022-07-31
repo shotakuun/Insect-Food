@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post 'sign_up', to: 'users#create'
 
   get 'login', to: 'user_sessions#new'
+  post 'gest_login', to: 'user_sessions#gest_login'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 end
