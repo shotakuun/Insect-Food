@@ -75,7 +75,7 @@ https://www.figma.com/file/RAZ9kzPk1hMx15SATlcLHJ/Untitled
 
 ---
 
-[![Image from Gyazo](https://i.gyazo.com/9e159e7cbbd90e21eb83c36a6397b9d9.png)](https://gyazo.com/9e159e7cbbd90e21eb83c36a6397b9d9)
+[![Image from Gyazo](https://i.gyazo.com/2f755d75b59356eae0fe5e55b94c7067.png)](https://gyazo.com/2f755d75b59356eae0fe5e55b94c7067)
 
 ### **使用技術：**
 

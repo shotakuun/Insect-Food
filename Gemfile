@@ -17,6 +17,7 @@ gem "html2slim"
 gem 'bootstrap', '~> 4.1.1'
 gem 'sorcery'
 gem 'rails-i18n'
+gem 'config'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -24,7 +25,6 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'annotate'
   gem 'pry-byebug'
-  gem 'pry-rails'
   gem 'irbtools', require: 'irbtools/binding'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop', require: false
@@ -33,6 +33,7 @@ group :development, :test do
   gem 'rubocop-rspec'
   gem 'rubocop-rspec-focused', require: false
   gem 'faker'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :development do

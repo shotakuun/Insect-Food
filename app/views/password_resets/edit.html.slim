@@ -1,0 +1,22 @@
+.form-wrapper
+  h3 パスワードリセット
+  = form_with model: @user, url: password_reset_path(@token), local: true do |f|
+    .form-item
+      = f.password_field :password, placeholder: 'パスワード', required: true, minlength:"3", maxlenght:'255', id:'password'
+    .form-item
+      = f.password_field :password_confirmation, placeholder:'パスワード確認', required: true, oninput:"CheckPasswordConfirmation(this)"
+    .button-panel
+      = f.submit 'パスワードを更新する', class: 'submit-btn'
+
+  script
+    |
+      function CheckPasswordConfirmation(password_confirmation){
+        const val1 = document.getElementById("password").value
+        const val2 = password_confirmation.value
+        if(val1 != val2){
+          password_confirmation.setCustomValidity("入力値が一致しません。");
+        }else{
+          password_confirmation.setCustomValidity("");
+        }
+      }
+
