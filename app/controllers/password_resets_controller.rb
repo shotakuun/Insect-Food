@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app/controllers/password_resets_controller.rb
 class PasswordResetsController < ApplicationController
   # In Rails 5 and above, this will raise an error if
@@ -17,38 +19,30 @@ class PasswordResetsController < ApplicationController
 
     # Tell the user instructions have been sent whether or not email was found.
     # This is to not leak information to attackers about which emails exist in the system.
-    redirect_to root_url, success: "登録先のメールアドレスに送りました"
+    redirect_to root_url, success: 'パスワードリセットメールを送りました'
   end
 
   # This is the reset password form.
   def edit
     @token = params[:id]
     @user = User.load_from_reset_password_token(params[:id])
-
-    if @user.blank?
-      not_authenticated
-      return
-    end
+    not_authenticated if @user.blank?
   end
 
   # This action fires when the user has sent the reset password form.
+  #
   def update
     @token = params[:id]
     @user = User.load_from_reset_password_token(params[:id])
 
-    if @user.blank?
-      not_authenticated
-      return
-    end
+    return not_authenticated if @user.blank?
 
-    # the next line makes the password confirmation validation work
     @user.password_confirmation = params[:user][:password_confirmation]
-    # the next line clears the temporary token and updates the password
     if @user.change_password(params[:user][:password])
-      redirect_to root_url, success: "パスワードを更新しました"
+      redirect_to root_url, success: 'パスワードを変更しました'
     else
-      flash.now[:danger] = "パスワードを更新しできませんでした"
-      render :action => "edit"
+      flash.now[:danger] = 'パスワードを変更できませんでした'
+      render action: 'edit'
     end
   end
 end
