@@ -32,6 +32,7 @@ group :development, :test do
   gem 'rubocop-rspec'
   gem 'rubocop-rspec-focused', require: false
   gem 'faker'
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :development do
