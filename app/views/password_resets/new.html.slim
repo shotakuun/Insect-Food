@@ -1,0 +1,7 @@
+.form-wrapper
+  h3 パスワードリセット
+  = form_with url: password_resets_path, local: true do |f|
+    .form-item
+      = f.email_field:email,  placeholder: 'メールアドレス', required: true, maxlenght:'255'
+    .button-panel
+      = f.submit 'メールを送信', class: 'submit-btn'
