@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
+      ThanxMailer.welcome(@user).deliver
       redirect_to root_url, success: '登録しました'
     else
       render :new
