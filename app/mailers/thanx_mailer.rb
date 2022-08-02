@@ -7,6 +7,6 @@ class ThanxMailer < ApplicationMailer
   #
   def welcome(user)
     @user = user
-    mail(:subject => "登録ありがとう！！！！", to: user.email)
+    mail(:subject => "ご登録ありがとうございます", to: user.email)
   end
 end
