@@ -1,5 +1,5 @@
 .form-wrapper
-  h3 パスワードリセット
+  h3 (t '.login')
   = form_with model: @user, url: password_reset_path(@token), local: true do |f|
     .form-item
       = f.password_field :password, placeholder: 'パスワード', required: true, minlength:"3", maxlenght:'255', id:'password'
