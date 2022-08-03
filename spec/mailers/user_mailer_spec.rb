@@ -11,11 +11,6 @@ RSpec.describe UserMailer, type: :mailer do
 /).map { |i| Base64.decode64(i) }.join
   end
   # Base64 encodeをデコードして比較できるようにする
-  #
-  before do
-    UserMailer.reset_password_email(user)
-    ActionMailer::Base.deliveries.clear # 送られたテストが配列になって保存されているのでそれらをクリアする
-  end
 
   context 'ActionMailerの送信' do
     it 'ヘッダーが正しく表示されること' do
