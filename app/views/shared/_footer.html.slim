@@ -3,10 +3,10 @@ footer.py-3.
     .text-center
       .d-flex.justify-content-center
         .
-          = link_to 'Insect Food', root_path, class: 'navbar-brand text-light'
-          = link_to '利用規約', root_path, class: 'navbar-brand text-light mx-3'
-          = link_to 'プライバシーポリシー', root_path, class: 'navbar-brand text-light'
-          = link_to 'お問い合わせ', root_path, class: 'navbar-brand text-light mr-5'
+          = link_to t('defaults.footer_title'), root_path, class: 'navbar-brand text-light'
+          = link_to t('defaults.footer_terms'), root_path, class: 'navbar-brand text-light mx-3'
+          = link_to t('defaults.footer_poricy'), root_path, class: 'navbar-brand text-light'
+          = link_to t('defaults.footer_contact'), root_path, class: 'navbar-brand text-light mr-5'
         .icon
           = link_to "#", class: 'text-light' do
             span.fab.fa-line

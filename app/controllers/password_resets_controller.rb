@@ -19,7 +19,7 @@ class PasswordResetsController < ApplicationController
 
     # Tell the user instructions have been sent whether or not email was found.
     # This is to not leak information to attackers about which emails exist in the system.
-    redirect_to root_url, success: t("controller.sent_resets_password")
+    redirect_to root_url, success: t('controller.sent_resets_password')
   end
 
   # This is the reset password form.
@@ -39,10 +39,10 @@ class PasswordResetsController < ApplicationController
 
     @user.password_confirmation = params[:user][:password_confirmation]
     if @user.change_password(params[:user][:password])
-      redirect_to root_url, success: t("controller.update_password")
+      redirect_to root_url, success: t('controller.update_password')
     else
-      flash.now[:danger] = t("controller.not_update_password")
-      render action: "edit"
+      flash.now[:danger] = t('controller.not_update_password')
+      render action: 'edit'
     end
   end
 end
