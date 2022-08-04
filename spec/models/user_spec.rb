@@ -6,6 +6,7 @@
 #
 #  id                                  :bigint           not null, primary key
 #  access_count_to_reset_password_page :integer          default(0)
+#  avatar                              :string(255)
 #  crypted_password                    :string(255)
 #  email                               :string(255)      not null
 #  name                                :string(255)      not null
