@@ -8,6 +8,6 @@ class ThanxMailer < ApplicationMailer
   #
   def welcome(user)
     @user = user
-    mail(subject: 'ご登録ありがとうございます', to: user.email)
+    mail(to: user.email, subject: t('mailers.create_user'))
   end
 end

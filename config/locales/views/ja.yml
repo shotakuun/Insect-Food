@@ -1,4 +1,11 @@
 ja:
+  mailers:
+    create_user: ご登録ありがとうございます
+    resets_password: パスワードのリセットについて
+  controller:
+    sent_resets_password: パスワードリセットメールを送りました。
+    update_password: パスワードを更新しました。
+    not_update_password: パスワードを更新しました。
   password_resets: #コントローラー名を記載
     new: #　各アクションを登録することができる。
       login: パスワードリセット
