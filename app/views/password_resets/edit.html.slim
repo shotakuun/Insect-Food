@@ -1,12 +1,12 @@
 .form-wrapper
-  h3 パスワードリセット
+  h3 = t('.edit_password')
   = form_with model: @user, url: password_reset_path(@token), local: true do |f|
     .form-item
-      = f.password_field :password, placeholder: 'パスワード', required: true, minlength:"3", maxlenght:'255', id:'password'
+      = f.password_field :password, placeholder: t('.new_password'), required: true, minlength:"3", maxlenght:'255', id:'password'
     .form-item
-      = f.password_field :password_confirmation, placeholder:'パスワード確認', required: true, oninput:"CheckPasswordConfirmation(this)"
+      = f.password_field :password_confirmation, placeholder: t('.new_password_confirmation'), required: true, oninput:"CheckPasswordConfirmation(this)"
     .button-panel
-      = f.submit 'パスワードを更新する', class: 'submit-btn'
+      = f.submit t('.update_password'), class: 'submit-btn'
 
   script
     |

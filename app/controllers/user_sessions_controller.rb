@@ -7,16 +7,16 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_to root_url, success: 'ログインしました'
+      redirect_to root_url, success: t('controller.success_login')
     else
-      flash.now[:danger] = 'ログインに失敗しました'
+      flash.now[:danger] = t('controller.not_login')
       render :new
     end
   end
 
   def destroy
     logout
-    redirect_to root_url, success: 'ログアウトしました'
+    redirect_to root_url, success: t('controller.logout')
   end
 
   def gest_login
@@ -27,6 +27,6 @@ class UserSessionsController < ApplicationController
       password_confirmation: 'password'
     )
     auto_login(@guest_user)
-    redirect_to root_path, success: 'ゲストとしてログインしました'
+    redirect_to root_url, success: t('controller.gest_login')
   end
 end
