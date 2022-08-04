@@ -16,7 +16,7 @@ RSpec.describe UserMailer, type: :mailer do
     it 'ヘッダーが正しく表示されること' do
       expect(mail.to[0]).to eq(user.email) # 配列になっている為最初の要素を取り出す
       expect(mail.from[0]).to eq('insectfood.info@gmail.com') # 配列になっている為最初の要素を取り出す
-      expect(mail.subject).to eq('パスワードリセット')
+      expect(mail.subject).to eq('パスワードのリセットについて')
     end
 
     it 'メール文が正しく表示されること' do
