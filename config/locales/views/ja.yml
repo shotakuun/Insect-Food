@@ -25,7 +25,7 @@ ja:
       login: パスワードリセット
       submit: メールを送信
     edit: #　各アクションを登録することができる。
-      edit_password: パスワードを更新
+      edit_password: パスワード更新
       new_password: 新しいパスワード
       new_password_confirmation: 新しいパスワード確認
       update_password: パスワードを更新する

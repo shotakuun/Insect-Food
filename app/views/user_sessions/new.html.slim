@@ -1,3 +1,5 @@
+- content_for(:title, t('.login'))
+
 .form-wrapper
   h3 = t('.login')
   = form_with url: login_path, method: :post do |f|
