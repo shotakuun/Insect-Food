@@ -11,6 +11,7 @@ import "@fortawesome/fontawesome-free/js/all";
 
 import "./scroll";
 import "./flash";
+import "./preview";
 
 Rails.start();
 Turbolinks.start();
