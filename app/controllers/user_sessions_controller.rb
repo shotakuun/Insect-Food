@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class UserSessionsController < ApplicationController
+  skip_before_action :require_login, only: %i[new create gest_login]
+
   def new; end
 
   def create

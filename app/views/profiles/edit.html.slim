@@ -1,8 +1,8 @@
-- content_for(:title, t('.title'))
-
 .form-wrapper
   h3 = t('.title')
-  = form_with model: @user, url: sign_up_path, local: true do |f|
+  = form_with model: @user, url: profile_path, local: true do |f|
+    = image_tag @user.avatar.url, class: 'rounded-circle mx-auto my-4 d-block', id: 'preview', size: '100x100'
+    = f.file_field :avatar, class: 'd-block mx-auto mb-3 avatar-font-size'
     .form-item
       = f.text_field :name, placeholder: t('.name'), required: true, minlength:"3", maxlenght:'255'
       - if @user.errors.include?(:name)
@@ -11,9 +11,6 @@
       = f.email_field:email,  placeholder: t('.mail'), required: true, maxlenght:'255'
       - if @user.errors.include?(:email)
       p style="color: red;"= @user.errors.full_messages_for(:email).first
-    .form-item
-      = f.email_field:email,  placeholder: t('.mail'), required: true, maxlenght:'255'
-      - if @user.errors.include?(:email)
-      p style="color: red;"= @user.errors.full_messages_for(:email).first
     .button-panel
       = f.submit class: 'submit-btn'
+
