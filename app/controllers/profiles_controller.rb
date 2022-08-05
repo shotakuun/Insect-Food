@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to root_url, success: t("controller.profiles_user")
+      redirect_to root_url, success: t('controller.profiles_user')
     else
       render :edit
     end
