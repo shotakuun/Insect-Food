@@ -9,8 +9,8 @@ RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /myapp
 COPY Gemfile Gemfile.lock /
-RUN gem install bundler:2.3.17 \
-    && bundle install
+RUN gem install bundler:2.3.17
+RUN bundle install
 
 RUN bundle exec rails webpacker:compile \
     && mkdir -p tmp/sockets && mkdir -p tmp/pids && . /
