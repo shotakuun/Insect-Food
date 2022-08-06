@@ -18,6 +18,7 @@ ja:
     not_login: ログインに失敗しました
     logout: ログアウトしました。
     gest_login: ゲストとしてログインしました。
+    profiles_user: プロフィールを更新しました。
     success_user: "%{item}登録が完了しました"
     failure_user: "%{item}登録に失敗しました"
   password_resets: #コントローラー名を記載
@@ -54,3 +55,8 @@ ja:
       password: パスワード
       password_confirmation: パスワード確認
       login: ログインはこちらから
+  profiles:
+    edit:
+      title: ユーザープロフィール
+      name: ニックネーム
+      mail: メールアドレス

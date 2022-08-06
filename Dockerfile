@@ -1,17 +1,19 @@
 FROM ruby:3.0.3
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs vim
-RUN npm install --global yarn
+
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - \
+    && apt-get update -qq \
+    && apt-get install -y nodejs \
+    && npm install -g yarn
 
 RUN rm -rf /var/lib/apt/lists/*
+
 WORKDIR /myapp
-COPY Gemfile .
-COPY Gemfile.lock .
-RUN bundle install
-RUN yarn install --check-files
-RUN bundle exec rails webpacker:compile
-RUN mkdir -p tmp/sockets
-RUN mkdir -p tmp/pids
-COPY . /myapp
+COPY Gemfile Gemfile.lock /
+RUN gem install bundler:2.3.17 \
+    && bundle install
+
+RUN bundle exec rails webpacker:compile \
+    && mkdir -p tmp/sockets && mkdir -p tmp/pids && . /
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class UserSessionsController < ApplicationController
+  skip_before_action :require_login, only: %i[new create gest_login]
+
   def new; end
 
   def create
@@ -21,7 +23,7 @@ class UserSessionsController < ApplicationController
 
   def gest_login
     @guest_user = User.create(
-      name: SecureRandom.alphanumeric(5),
+      name: "テストユーザー(#{Faker::Name.name})",
       email: "#{SecureRandom.alphanumeric(10)}@email.com",
       password: 'password',
       password_confirmation: 'password'
