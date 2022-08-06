@@ -1,0 +1,62 @@
+ja:
+  defaults:
+    footer_title: Insect Food
+    footer_terms: 利用規約
+    footer_poricy: プライバシーポリシー
+    footer_contact: お問い合わせ
+    header_title: Insect Foodってどんなアプリ？
+    header_p1: 初めての昆虫食にチャレンジしたい人に向けて作ったサービスです
+    header_p2: 昆虫の質問を答えると最後にあなたの昆虫食レベルとおすすめの虫がわかります
+  mailers:
+    create_user: ご登録ありがとうございます
+    resets_password: パスワードのリセットについて
+  controller:
+    sent_resets_password: パスワードリセットメールを送りました
+    update_password: パスワードを更新しました
+    not_update_password: パスワードを更新しました
+    success_login: ログインしました
+    not_login: ログインに失敗しました
+    logout: ログアウトしました。
+    gest_login: ゲストとしてログインしました。
+    profiles_user: プロフィールを更新しました。
+    success_user: "%{item}登録が完了しました"
+    failure_user: "%{item}登録に失敗しました"
+  password_resets: #コントローラー名を記載
+    new: #　各アクションを登録することができる。
+      login: パスワードリセット
+      submit: メールを送信
+    edit: #　各アクションを登録することができる。
+      edit_password: パスワード更新
+      new_password: 新しいパスワード
+      new_password_confirmation: 新しいパスワード確認
+      update_password: パスワードを更新する
+  top:
+    index:
+      title: 今昆虫食が熱い理由
+      merit: 昆虫食を食べるメリット
+      merit1: 美味しい
+      merit2: 栄養価が高い
+      merit3: ほぼ全部食べれる
+      search_insect: 気になる虫を探してみよう！
+      eat_insect: 食べられる虫をみる
+      look_insect: 虫診断を始める
+  user_sessions:
+    new:
+      login: ログイン
+      mail: メールアドレス
+      password: パスワード
+      create: 新規登録はこちらから
+      resets_password: パスワードリセットはこちらから
+  users:
+    new:
+      title: 新規登録
+      name: ニックネーム
+      mail: メールアドレス
+      password: パスワード
+      password_confirmation: パスワード確認
+      login: ログインはこちらから
+  profiles:
+    edit:
+      title: ユーザープロフィール
+      name: ニックネーム
+      mail: メールアドレス

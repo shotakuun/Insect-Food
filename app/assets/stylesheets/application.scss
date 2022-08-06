@@ -42,10 +42,15 @@ body {
 footer {
   position: sticky;
   top: 100vh;
-  background-color: #876445;
+  background-color: #5ea351;
   .icon {
     line-height: 40px;
   }
   left: 0;
 }
 //footerエリア
+
+//プロフィールエリア
+.avatar-font-size {
+  font-size: 12px;
+}

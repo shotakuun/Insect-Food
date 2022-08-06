@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       auto_login(@user)
       ThanxMailer.welcome(@user).deliver
-      redirect_to root_url, success: '登録しました'
+      redirect_to root_url, success: t('controller.success_user', item: User.model_name.human)
     else
       render :new
     end

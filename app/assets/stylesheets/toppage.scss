@@ -11,6 +11,11 @@
 }
 
 //headerエリア
+.text-decoration-none {
+  &:hover {
+    text-decoration-line: none;
+  }
+}
 header {
   background-image: image-url("istockphoto-1059673070-1024x1024.jpg");
   background-size: cover;
@@ -18,11 +23,6 @@ header {
   height: 600px;
   position: relative;
   overflow: auto;
-  .text-decoration-none {
-    &:hover {
-      text-decoration-line: none;
-    }
-  }
   .top-header {
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.55);
@@ -34,7 +34,7 @@ header {
     z-index: 10;
     transition: 0.7s;
     &.scroll-nav {
-      background: #876445;
+      background: #5ea351;
       /* コンテンツの背景が白でもナビゲーションだと分かりやすいように影をつける */
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
     }
@@ -56,4 +56,3 @@ header {
   }
 }
 //headerエリア
-

@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
   resources :password_resets, only: %i[new create edit update]
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
+  get 'profile', to: 'profiles#edit'
+  patch 'profile', to: 'profiles#update'
 end

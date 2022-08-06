@@ -6,6 +6,7 @@
 #
 #  id                                  :bigint           not null, primary key
 #  access_count_to_reset_password_page :integer          default(0)
+#  avatar                              :string(255)
 #  crypted_password                    :string(255)
 #  email                               :string(255)      not null
 #  name                                :string(255)      not null
@@ -101,6 +102,13 @@ RSpec.describe User, type: :model do
         user = build(:user, password: 'a' * 6, password_confirmation: 'a' * 7)
         expect(user.valid?).to be false
         expect(user.errors[:password_confirmation]).to include('とパスワードの入力が一致しません')
+      end
+    end
+
+    describe 'アバターカラム' do
+      it 'avatarカラムにアップロードしたファイル名が保存さてていること' do
+        create_user
+        expect(create_user.avatar.filename).to eq 'download.png'
       end
     end
   end

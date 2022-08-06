@@ -1,5 +1,6 @@
-class ThanxMailer < ApplicationMailer
+# frozen_string_literal: true
 
+class ThanxMailer < ApplicationMailer
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -7,6 +8,6 @@ class ThanxMailer < ApplicationMailer
   #
   def welcome(user)
     @user = user
-    mail(:subject => "ご登録ありがとうございます", to: user.email)
+    mail(to: user.email, subject: t('mailers.create_user'))
   end
 end

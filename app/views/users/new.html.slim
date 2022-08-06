@@ -1,19 +1,25 @@
+- content_for(:title, t('.title'))
+
 .form-wrapper
-  h3 新規登録
+  h3 = t('.title')
   = form_with model: @user, url: sign_up_path, local: true do |f|
     .form-item
-      = f.text_field :name, placeholder: 'ニックネーム', required: true, minlength:"3", maxlenght:'255'
+      = f.text_field :name, placeholder: t('.name'), required: true, minlength:"3", maxlenght:'255'
+      - if @user.errors.include?(:name)
+      p style="color: red;"= @user.errors.full_messages_for(:name).first
     .form-item
-      = f.email_field:email,  placeholder: 'メールアドレス', required: true, maxlenght:'255'
+      = f.email_field:email,  placeholder: t('.mail'), required: true, maxlenght:'255'
+      - if @user.errors.include?(:email)
+      p style="color: red;"= @user.errors.full_messages_for(:email).first
     .form-item
-      = f.password_field :password, placeholder: 'パスワード', required: true, minlength:"3", maxlenght:'255', id:'password'
+      = f.password_field :password, placeholder: t('.password'), required: true, minlength:"3", maxlenght:'255', id:'password'
     .form-item
-      = f.password_field :password_confirmation, placeholder:'パスワード確認', required: true, oninput:"CheckPasswordConfirmation(this)"
+      = f.password_field :password_confirmation, placeholder: t('.password_confirmation'), required: true, oninput:"CheckPasswordConfirmation(this)"
     .button-panel
       = f.submit class: 'submit-btn'
   .form-footer
     p
-      = link_to 'ログインはこちらから', login_path
+      = link_to t('.login'), login_path
 
   script
     |
@@ -26,3 +32,4 @@
           password_confirmation.setCustomValidity("");
         }
       }
+Footer

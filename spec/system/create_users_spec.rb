@@ -19,7 +19,7 @@ RSpec.describe 'CreateUsers', type: :system do
         click_button '登録する'
         expect(current_path).to eq(root_path)
         expect(User.count).to eq 1
-        expect(page).to have_content('登録しました')
+        expect(page).to have_content('ユーザー登録が完了しました')
       end
     end
 
