@@ -27,7 +27,7 @@ require:
 RSpec/Focused:
   Enabled: true
 
-LineLength:
+Metrics/LineLength:
   Max: 140
 
 Metrics/AbcSize:

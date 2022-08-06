@@ -24,9 +24,10 @@
 #
 FactoryBot.define do
   factory :user do
-    name { Faker::Name }
+    name { Faker::Name.initials(number: 4) }
     email { Faker::Internet.free_email }
     password { 'password' }
     password_confirmation { 'password' }
+    avatar { Rack::Test::UploadedFile.new(Rails.root.join('spec/fixtures/images/download.png')) }
   end
 end

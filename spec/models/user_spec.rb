@@ -104,5 +104,12 @@ RSpec.describe User, type: :model do
         expect(user.errors[:password_confirmation]).to include('とパスワードの入力が一致しません')
       end
     end
+
+    describe 'アバターカラム' do
+      it 'avatarカラムにアップロードしたファイル名が保存さてていること' do
+        create_user
+        expect(create_user.avatar.filename).to eq 'download.png'
+      end
+    end
   end
 end

@@ -14,6 +14,7 @@ module Myapp
       g.helper false #app/helperの自動生成をoff
       g.assets false #同名のcssやjsの生成をoff
       g.test_framework :rspec, #標準のテストをRSpecに変更
+                       request_specs: false,
                        controller_specs: false, #公式で非推奨のためoff
                        view_specs: false, #Request/Systemで代替するのでoff
                        routing_specs: false #使用頻度低いのでoff
