@@ -20,6 +20,7 @@ gem 'rails-i18n'
 gem 'config'
 gem 'carrierwave'
 gem 'sassc', '2.1.0'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -34,7 +35,6 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
   gem 'rubocop-rspec-focused', require: false
-  gem 'faker'
   gem 'letter_opener_web', '~> 1.0'
 end
 
