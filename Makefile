@@ -1,3 +1,5 @@
+bundle:
+	docker-compose -f docker-compose.production.yml run rails bundle install
 build:
 	docker-compose -f docker-compose.production.yml build
 assets:
