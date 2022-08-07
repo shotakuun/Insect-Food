@@ -65,6 +65,11 @@ GEM
     annotate (3.2.0)
       activerecord (>= 3.2, < 8.0)
       rake (>= 10.4, < 14.0)
+    asset_sync (2.15.2)
+      activemodel (>= 4.1.0)
+      fog-core
+      mime-types (>= 2.99)
+      unf
     ast (2.4.2)
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
@@ -438,6 +443,9 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.8.2)
     unicode-display_width (2.2.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
@@ -469,6 +477,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  asset_sync
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.4)
