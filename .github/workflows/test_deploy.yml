@@ -73,7 +73,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Insttall SSH key
+      - name: Insttall SSH key1
+        env:
+          ARGS: "-av"
+          USER_NAME: ${{ secrets.USER_NAME }}
+          HOST_NAME2: ${{ secrets.HOST_NAME2 }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME2} 'cd /Insect-Food &&
+          sudo git pull origin main &&
+          make bundle &&
+          make build &&
+          make assets &&
+          make migrate &&
+          docker-compose restart'
+
+      - name: Insttall SSH key2
         env:
           ARGS: "-av"
           USER_NAME: ${{ secrets.USER_NAME }}
@@ -82,21 +98,6 @@ jobs:
         run: |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} 'cd /Insect-Food &&
-          sudo git pull origin main &&
-          make bundle &&
-          make build &&
-          make assets &&
-          make migrate &&
-          docker-compose restart'
-      - name: Insttall SSH key
-        env:
-          ARGS: "-av"
-          USER_NAME: ${{ secrets.USER_NAME }}
-          HOST_NAME: ${{ secrets.HOST_NAME2 }}
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY2 }}
-        run: |
-          echo "$PRIVATE_KEY2" > private_key && chmod 600 private_key
-          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME2} 'cd /Insect-Food &&
           sudo git pull origin main &&
           make bundle &&
           make build &&
