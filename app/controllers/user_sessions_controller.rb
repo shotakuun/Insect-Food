@@ -23,7 +23,7 @@ class UserSessionsController < ApplicationController
 
   def gest_login
     @guest_user = User.create(
-      name: "テストユーザー(#{Faker::Name.name})",
+      name: "テストユーザー#{SecureRandom.alphanumeric(6)}",
       email: "#{SecureRandom.alphanumeric(10)}@email.com",
       password: 'password',
       password_confirmation: 'password'

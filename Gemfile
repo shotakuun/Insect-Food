@@ -20,7 +20,6 @@ gem 'rails-i18n'
 gem 'config'
 gem 'carrierwave'
 gem 'sassc', '2.1.0'
-gem 'faker'
 gem 'fog-aws'
 gem 'asset_sync'
 
@@ -52,6 +51,7 @@ group :test do
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   gem 'webdrivers'
   gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
