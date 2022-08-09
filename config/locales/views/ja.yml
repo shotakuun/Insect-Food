@@ -5,8 +5,8 @@ ja:
     footer_poricy: プライバシーポリシー
     footer_contact: お問い合わせ
     header_title: Insect Foodってどんなアプリ？
-    header_p1: 初めての昆虫食にチャレンジしたい人に向けて作ったサービスです
-    header_p2: 昆虫の質問を答えると最後にあなたの昆虫食レベルとおすすめの虫がわかります
+    header_p1: 昆虫食にチャレンジしたい人に向けて作ったサービスです。
+    header_p2: 昆虫診断を行うと自分にとって最高のパートナー（昆虫）と出会えることができます。
   mailers:
     create_user: ご登録ありがとうございます
     resets_password: パスワードのリセットについて
