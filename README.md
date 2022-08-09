@@ -2,6 +2,8 @@
 
 # Insect-Food
 
+<a href="https://gyazo.com/6f59c3aa43d423670e9830e6c60e3ed9"><img src="https://i.gyazo.com/6f59c3aa43d423670e9830e6c60e3ed9.png" alt="Image from Gyazo" width="5000"/></a>
+
 https://insect-food.jp/
 
 ### **サービスの概要:**
