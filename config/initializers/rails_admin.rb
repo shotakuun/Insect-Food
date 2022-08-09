@@ -5,12 +5,13 @@ RailsAdmin.config do |config|
   ## == Devise ==
   config.authenticate_with do
     require_login
+    redirect_to root_path unless current_user.admin? # 追記
   end
   config.current_user_method(&:current_user)
-  config.parent_controller = 'ApplicationController'
+  config.parent_controller = "ApplicationController"
 
   ## == CancanCan ==
-  # config.authorize_with :cancancan
+   config.authorize_with :cancancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
