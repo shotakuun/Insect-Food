@@ -1,17 +1,17 @@
-RailsAdmin.config do |config|
+# frozen_string_literal: true
 
+RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
   config.authenticate_with do
     require_login
-    redirect_to root_path unless current_user.admin? # 追記
+    redirect_to main_app.root_path unless current_user.admin?
   end
   config.current_user_method(&:current_user)
-  config.parent_controller = "ApplicationController"
 
   ## == CancanCan ==
-   config.authorize_with :cancancan
+  config.authorize_with :cancancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
@@ -40,4 +40,5 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+  config.parent_controller = 'ApplicationController'
 end

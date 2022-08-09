@@ -13,6 +13,7 @@
 #  reset_password_email_sent_at        :datetime
 #  reset_password_token                :string(255)
 #  reset_password_token_expires_at     :datetime
+#  role                                :integer          default(0), not null
 #  salt                                :string(255)
 #  created_at                          :datetime         not null
 #  updated_at                          :datetime         not null
@@ -31,4 +32,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true, length: { maximum: 255 }
   validates :name, uniqueness: true, presence: true, length: { minimum: 3, maximum: 255 }
   mount_uploader :avatar, AvatarUploader
+
+  enum role: { general: 0, admin: 1 }
 end
