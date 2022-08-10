@@ -19,6 +19,7 @@ ja:
     logout: ログアウトしました。
     gest_login: ゲストとしてログインしました。
     profiles_user: プロフィールを更新しました。
+    need_login: ログインが必要です。
     success_user: "%{item}登録が完了しました"
     failure_user: "%{item}登録に失敗しました"
   password_resets: #コントローラー名を記載
