@@ -30,5 +30,9 @@ FactoryBot.define do
     password { 'password' }
     password_confirmation { 'password' }
     avatar { Rack::Test::UploadedFile.new(Rails.root.join('spec/fixtures/images/download.png')) }
+
+    trait :admin do
+      role { :admin }
+    end
   end
 end
