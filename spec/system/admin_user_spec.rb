@@ -30,16 +30,17 @@ RSpec.describe '管理者権限', type: :system do
 
     context '失敗系' do
       context 'ログインしていない場合' do
-        it '管理画面へ遷移を行うとログインページへ遷移させられること' do
+        it '管理画面へ遷移を行うと404エラーページへ遷移される事' do
           visit rails_admin_path
-          expect(current_path).to eq(login_path)
-          expect(page).to have_content('ログインが必要です')
+          expect(page).to have_content '404'
+          expect(page.status_code).to eq 404
         end
 
-        it 'ログイン済みの場合でもadmin権限がないユーザーはトップ画面へ遷移させられること' do
+        it 'ログイン済みの場合でもadmin権限がないユーザーは404エラーページへ繊維される事' do
           login(general_user)
           visit rails_admin_path
-          expect(current_path).to eq(root_path)
+          expect(page).to have_content '404'
+          expect(page.status_code).to eq 404
         end
       end
     end
