@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'CreateUsers', type: :system do
+RSpec.describe 'ユーザーの作成', type: :system do
   describe 'ユーザー作成ページ' do
     before do
       visit(root_path)

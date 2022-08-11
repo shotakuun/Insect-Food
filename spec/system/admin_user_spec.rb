@@ -2,10 +2,10 @@
 
 require 'rails_helper'
 
-RSpec.describe 'AdminUsers', type: :system do
+RSpec.describe '管理者権限', type: :system do
   let(:general_user) { create(:user) }
   let(:user) { create(:user, :admin) }
-  describe '管理者ページ' do
+  describe '管理者ページの表示確認' do
     context '正常系' do
       before do
         login(user)
