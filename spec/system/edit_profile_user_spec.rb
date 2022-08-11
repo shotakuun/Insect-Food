@@ -2,10 +2,10 @@
 
 require 'rails_helper'
 
-RSpec.describe 'プロフィールユーザー', type: :system do
+RSpec.describe 'ユーザープロフィール', type: :system do
   let(:user) { create(:user) }
 
-  describe 'ユーザー編集' do
+  describe 'ユーザーの編集' do
     before do
       login(user)
       visit(profile_path)

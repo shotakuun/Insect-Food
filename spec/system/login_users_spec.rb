@@ -2,10 +2,10 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Login_Users', type: :system do
+RSpec.describe 'ログインページ', type: :system do
   let(:user) { create(:user) }
 
-  describe 'ユーザーログイン' do
+  describe 'ユーザーのログイン' do
     before do
       visit login_path
     end
