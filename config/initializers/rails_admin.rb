@@ -5,9 +5,9 @@ RailsAdmin.config do |config|
 
   ## == Devise ==
   config.authenticate_with do
-    require_login
-    redirect_to main_app.root_path unless current_user.admin?
+    render file: Rails.root.join('public', '404.html'), layout: false, status: 404 unless logged_in? && current_user.admin?
   end
+
   config.current_user_method(&:current_user)
 
   ## == CancanCan ==
@@ -40,5 +40,4 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
-  config.parent_controller = 'ApplicationController'
 end
