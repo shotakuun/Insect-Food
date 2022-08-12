@@ -77,3 +77,4 @@ ja:
   insects:
     index:
       title: 食べれる虫一覧
+      not_insect: 食べられる虫がいません。

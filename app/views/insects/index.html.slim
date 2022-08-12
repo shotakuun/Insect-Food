@@ -8,4 +8,7 @@
       button.btn.btn-primary type="submit"  虫を探す
 
   .row.mb-5
-    = render @insects
+    - if @insects.any?
+      = render @insects
+    - else
+      p.m-4 = t('.not_insect')
