@@ -1,0 +1,64 @@
+- content_for(:title, t('.title'))
+
+.mx-5.px-3
+  h3.text-left = t('.title')
+  .form-group
+    .d-flex
+      input#exampleInputEmail1.form-control aria-describedby="emailHelp" placeholder=("カブトムシ、食べ方）素揚げ") type="email" class='w-75 mr-4'/
+      button.btn.btn-primary type="submit"  虫を探す
+
+  .row.mb-5
+    .mt-3.col-md-6.col-lg-4
+      = link_to root_path, class:'text-decoration-none text-dark' do
+        = image_tag '0-01.jpg',size: '250', class:'d-block mx-auto mb-3'
+        p.mb-0.font-weight-bold カブトムシ
+        p.mb-2 みんな大好きカブトムシ
+      - if logged_in?
+        span.fa-solid.fa-utensils.text-danger
+        span.ml-2 食べたい
+        span.ml-2 1
+    .mt-3.col-md-6.col-lg-4
+      = link_to root_path, class:'text-decoration-none text-dark' do
+        = image_tag '0-01.jpg',size: '250', class:'d-block mx-auto mb-3'
+        p.mb-0.font-weight-bold カブトムシ
+        p.mb-2 みんな大好きカブトムシ
+      - if logged_in?
+        span.fa-solid.fa-utensils.text-danger
+        span.ml-2 食べたい
+        span.ml-2 1
+    .mt-3.col-md-6.col-lg-4
+      = link_to root_path, class:'text-decoration-none text-dark' do
+        = image_tag '0-01.jpg',size: '250', class:'d-block mx-auto mb-3'
+        p.mb-0.font-weight-bold カブトムシ
+        p.mb-2 みんな大好きカブトムシ
+      - if logged_in?
+        span.fa-solid.fa-utensils.text-danger
+        span.ml-2 食べたい
+        span.ml-2 1
+    .mt-3.col-md-6.col-lg-4
+      = link_to root_path, class:'text-decoration-none text-dark' do
+        = image_tag '0-01.jpg',size: '250', class:'d-block mx-auto mb-3'
+        p.mb-0.font-weight-bold カブトムシ
+        p.mb-2 みんな大好きカブトムシ
+      - if logged_in?
+        span.fa-solid.fa-utensils.text-danger
+        span.ml-2 食べたい
+        span.ml-2 1
+    .mt-3.col-md-6.col-lg-4
+      = link_to root_path, class:'text-decoration-none text-dark' do
+        = image_tag '0-01.jpg',size: '250', class:'d-block mx-auto mb-3'
+        p.mb-0.font-weight-bold カブトムシ
+        p.mb-2 みんな大好きカブトムシ
+      - if logged_in?
+        span.fa-solid.fa-utensils.text-danger
+        span.ml-2 食べたい
+        span.ml-2 1
+    .mt-3.col-md-6.col-lg-4
+      = link_to root_path, class:'text-decoration-none text-dark' do
+        = image_tag '0-01.jpg',size: '250', class:'d-block mx-auto mb-3'
+        p.mb-0.font-weight-bold カブトムシ
+        p.mb-2 みんな大好きカブトムシ
+      - if logged_in?
+        span.fa-solid.fa-utensils.text-danger
+        span.ml-2 食べたい
+        span.ml-2 1
