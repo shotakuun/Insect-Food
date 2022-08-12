@@ -4,6 +4,8 @@
     = image_tag @user.avatar.url, class: 'rounded-circle mx-auto my-4 d-block', id: 'preview', size: '100x100'
     = f.file_field :avatar, class: 'd-block mx-auto mb-3 avatar-font-size', id: "file_btn"
     = f.hidden_field :avatar_cache
+    - if @user.errors.include?(:avatar)
+    p style="color: red; word-break: keep-all;"= @user.errors.full_messages_for(:avatar).first
     .form-item
       = f.text_field :name, placeholder: t('.name'), required: true, minlength:"3", maxlenght:'255'
       - if @user.errors.include?(:name)
