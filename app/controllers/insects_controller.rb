@@ -3,5 +3,7 @@
 class InsectsController < ApplicationController
   skip_before_action :require_login, only: %i[index]
 
-  def index; end
+  def index
+    @insects = Insect.all
+  end
 end
