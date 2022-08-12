@@ -1,0 +1,14 @@
+- content_for(:title, t('.title'))
+
+.mx-5.px-3
+  h3.text-left = t('.title')
+  .form-group
+    .d-flex
+      input#exampleInputEmail1.form-control aria-describedby="emailHelp" placeholder=("カブトムシ、食べ方）素揚げ") type="email" class='w-75 mr-4'/
+      button.btn.btn-primary type="submit"  虫を探す
+
+  .row.mb-5
+    - if @insects.any?
+      = render @insects
+    - else
+      p.m-4 = t('.not_insect')

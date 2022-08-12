@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      insect: 昆虫
     attributes:
       user:
         name: ニックネーム
@@ -9,3 +10,11 @@ ja:
         password: パスワード
         password_confirmation: パスワード確認
         avatar: プロフィール画像
+      insect:
+        name: 名前
+        introduction: 味の紹介
+        catch_copy: キャッチコピー
+        insect_img: 虫の画像
+        cooking_store_link: 食べれるお店
+        online_store_link: 通販サイト
+        video_url_link: 虫の食べ方

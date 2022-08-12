@@ -1,0 +1,9 @@
+.mt-3.col-md-6.col-lg-4
+  = link_to root_path, class:'text-decoration-none text-dark' do
+    = image_tag insect.insect_img.url, class:'d-block mx-auto mb-3', width: '250'
+    p.mb-0.font-weight-bold = insect.name
+    p.mb-2 = insect.catch_copy
+  - if logged_in?
+    span.fa-solid.fa-utensils.text-danger
+    span.ml-2 食べたい
+    span.ml-2 1

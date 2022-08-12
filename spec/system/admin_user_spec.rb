@@ -21,7 +21,7 @@ RSpec.describe '管理者権限', type: :system do
           expect(User.count).to eq 2
           expect(current_path).to eq(rails_admin_path)
           click_link 'ユーザー', match: :first
-          page.all('.pjax')[20].click
+          page.all('.pjax')[21].click
           click_button '実行する'
           expect(User.count).to eq 1
         end
