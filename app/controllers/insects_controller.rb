@@ -4,6 +4,7 @@ class InsectsController < ApplicationController
   skip_before_action :require_login, only: %i[index]
 
   def index
-    @insects = Insect.all
+    @q = Insect.ransack(params[:q])
+    @insects = @q.result(distinct: true)
   end
 end
