@@ -1,6 +1,6 @@
 = search_form_for q do |f|
   .form-group
     .d-flex
-      = f.search_field :name_or_catch_copy_cont, class: 'form-control w-75', placeholder: '記事のタイトル'
+      = f.search_field :name_or_catch_copy_cont, class: 'form-control w-75', placeholder: t('defaults.search_insects'), id: 'search_eria'
       .form-group
         = f.submit class: 'btn btn-primary ml-3'
