@@ -16,4 +16,5 @@
 #  updated_at         :datetime         not null
 #
 class Insect < ApplicationRecord
+  mount_uploader :insect_img, InsectImgUploader
 end
