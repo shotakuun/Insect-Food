@@ -25,6 +25,7 @@ gem 'asset_sync'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
 gem 'ransack'
+gem "gon"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -47,6 +48,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   gem 'spring'
+  gem 'rails-erd'
 end
 
 group :test do

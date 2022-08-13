@@ -1,5 +1,5 @@
 FROM ruby:3.0.3
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs vim
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs vim graphviz
 RUN npm install --global yarn
 
 RUN rm -rf /var/lib/apt/lists/*
