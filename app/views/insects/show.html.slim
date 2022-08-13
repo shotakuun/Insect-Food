@@ -11,25 +11,25 @@
       canvas#myChart
   .row.mt-3
     .col-lg-6.mb-5
-      h4.mb-5 虫紹介
+      h4.mb-5  = t('.introduction')
       table.table.w-100.border-none
         tbody
           tr
-            th.w-25.small.font-weight-bold 虫の名前：
+            th.w-25.small.font-weight-bold = t('.name')
             td.small.font-weight-bold = @insect.name
           tr
-            th.w-25.small.font-weight-bold 味の紹介：
+            th.w-25.small.font-weight-bold = t('.insect_introduction')
             td.small.font-weight-bold = @insect.introduction
           tr
-            th.w-25.small.font-weight-bold 食べれるお店：
+            th.w-25.small.font-weight-bold = t('.eat_store')
             td.small.font-weight-bold = text_url_to_link(h(@insect.cooking_store_link)).html_safe
           tr.border-bottom
-            th.w-25.small.font-weight-bold 通販：
+            th.w-25.small.font-weight-bold = t('.only_store')
             td.small.font-weight-bold = text_url_to_link(h(@insect.online_store_link)).html_safe
-          p.small ※季節によっては取り扱いが終了している場合がります。
+          p.small = t('.not_insect_store')
     .col-lg-6
       h4.mb-5 = "#{@insect.name}を食べる参考動画"
       .text-center.mb-5
         iframe allow=("accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture") allowfullscreen="" frameborder="0" height="255" src=("https://www.youtube.com/embed/#{@insect.video_url_link}") width="400"
-        p.mb-0 登場シーン
+        p.mb-0 = t('.video_appearance_scene')
         p = @insect.video_appearance_scene
