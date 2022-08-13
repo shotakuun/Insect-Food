@@ -16,7 +16,10 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
-class Insect < ApplicationRecord
-  mount_uploader :insect_img, InsectImgUploader
-  has_many :graphs
+FactoryBot.define do
+  factory :insect do
+    name { 'アブラゼミ' }
+    catch_copy { '夏の訪れを感じさせてくれる、１週間の命' }
+    insect_img { Rack::Test::UploadedFile.new(Rails.root.join('spec/fixtures/images/download.png')) }
+  end
 end

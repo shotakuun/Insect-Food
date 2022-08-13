@@ -20,6 +20,7 @@ ja:
     header_title: Insect Foodってどんなアプリ？
     header_p1: 昆虫食にチャレンジしたい人に向けて作ったサービスです。
     header_p2: 昆虫診断を行うと自分にとって最高のパートナー（昆虫）と出会えることができます。
+    search_insects: 昆虫名 例）カブトムシ、夏の王者
   mailers:
     create_user: ご登録ありがとうございます
     resets_password: パスワードのリセットについて
@@ -78,3 +79,13 @@ ja:
     index:
       title: 食べれる虫一覧
       not_insect: 食べられる虫がいません。
+    show:
+      title: 食べれる虫詳細
+      back_index_page: 一覧ページへ戻る
+      introduction: 虫紹介
+      name: 虫の名前：
+      insect_introduction: 味の紹介：
+      eat_store: 食べれるお店：
+      only_store: 通販：
+      not_insect_store: ※季節によっては取り扱いが終了している場合があります。
+      video_appearance_scene: 登場シーン

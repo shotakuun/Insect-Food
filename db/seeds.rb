@@ -27,7 +27,17 @@ Insect.create!(
       introduction: "近い食材がない...大地の味がする。",
       name: "カブトムシ",
       online_store_link: "https://takeo.tokyo/?pid=116875100",
-      video_url_link: "https://www.youtube.com/watch?v=-vATsIe0jBs",
+      video_url_link: "-vATsIe0jBs",
+      video_appearance_scene: "5分25~",
     },
   ]
 )
+
+list1 = [
+  { data: 1, insect: Insect.find(1) }, { data: 1, insect: Insect.find(1) },
+  { data: 1, insect: Insect.find(1) },
+  { data: 1, insect: Insect.find(1) },
+  { data: 5, insect: Insect.find(1) },
+]
+
+Graph.create!(list1)
