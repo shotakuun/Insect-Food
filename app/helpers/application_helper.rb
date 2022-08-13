@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  require "uri"
+  require 'uri'
 
   def text_url_to_link(text)
-    require "uri"
-    uri_reg = URI.regexp(%w[http https])
-    return text.gsub(uri_reg) { "<a href='#{$&}' target='_blank'\>#{$&}</a>" }
+    require 'uri'
+    uri_reg = URI::DEFAULT_PARSER.make_regexp(%w[http https])
+    text.gsub(uri_reg) { "<a href='#{Regexp.last_match(0)}' target='_blank'\>#{Regexp.last_match(0)}</a>" }
   end
 
   BASE_TITLE = Settings.static.title
