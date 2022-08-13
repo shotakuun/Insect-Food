@@ -1,5 +1,5 @@
 .mt-3.col-md-6.col-lg-4
-  = link_to root_path, class:'text-decoration-none text-dark' do
+  = link_to insect_path(insect), class:'text-decoration-none text-dark' do
     = image_tag insect.insect_img.url, class:'d-block mx-auto mb-3', width: '250'
     p.mb-0.font-weight-bold = insect.name
     p.mb-2 = insect.catch_copy

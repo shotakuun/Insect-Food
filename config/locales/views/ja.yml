@@ -79,3 +79,6 @@ ja:
     index:
       title: 食べれる虫一覧
       not_insect: 食べられる虫がいません。
+    show:
+      title: 食べれる虫詳細
+      back_index_page: 一覧ページへ戻る
