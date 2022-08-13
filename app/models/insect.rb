@@ -18,4 +18,5 @@
 #
 class Insect < ApplicationRecord
   mount_uploader :insect_img, InsectImgUploader
+  has_many :graphs
 end

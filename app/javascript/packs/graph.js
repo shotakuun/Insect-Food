@@ -1,5 +1,6 @@
 document.addEventListener("turbolinks:load", () => {
   var ctx = document.getElementById("myChart");
+  const raderDate = gon.chart_data;
   var myChart = new Chart(ctx, {
     type: "radar",
     data: {
@@ -7,7 +8,7 @@ document.addEventListener("turbolinks:load", () => {
       datasets: [
         {
           label: "虫の味わい",
-          data: [2, 4, 5, 4, 3],
+          data: raderDate,
           backgroundColor: "rgb(40, 167, 79, 0.5)", //グラフ背景色
           borderColor: "rgba(94, 163, 91, 1)", //グラフボーダー色
         },

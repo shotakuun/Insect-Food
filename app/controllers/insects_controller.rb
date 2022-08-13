@@ -10,5 +10,6 @@ class InsectsController < ApplicationController
 
   def show
     @insect = Insect.find(params[:id])
+    gon.chart_data = @insect.graphs.pluck(:data)
   end
 end

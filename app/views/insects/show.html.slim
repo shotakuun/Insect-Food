@@ -7,6 +7,7 @@
   .row
     .col-lg-6
       = image_tag @insect.insect_img.url, class:'d-block mx-auto mb-3 pt-5', width: '350'
+    = Gon::Base.render_data
     .col-lg-6
       canvas#myChart
   .row.mt-3
