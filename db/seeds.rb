@@ -28,6 +28,7 @@ Insect.create!(
       name: "カブトムシ",
       online_store_link: "https://takeo.tokyo/?pid=116875100",
       video_url_link: "https://www.youtube.com/watch?v=-vATsIe0jBs",
+      video_appearance_scene: '5分25~'
     },
   ]
 )

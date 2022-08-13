@@ -8,11 +8,14 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import "@fortawesome/fontawesome-free/js/all";
+import Chart from "chart.js/auto";
 
 import "./scroll";
 import "./flash";
 import "./preview";
+require("./graph");
 
+global.Chart = Chart;
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
