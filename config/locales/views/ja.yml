@@ -20,6 +20,7 @@ ja:
     header_title: Insect Foodってどんなアプリ？
     header_p1: 昆虫食にチャレンジしたい人に向けて作ったサービスです。
     header_p2: 昆虫診断を行うと自分にとって最高のパートナー（昆虫）と出会えることができます。
+    search_insects: 昆虫名 例）カブトムシ、夏の王者
   mailers:
     create_user: ご登録ありがとうございます
     resets_password: パスワードのリセットについて
