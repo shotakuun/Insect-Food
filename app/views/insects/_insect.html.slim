@@ -4,6 +4,4 @@
     p.mb-0.font-weight-bold = insect.name
     p.mb-2 = insect.catch_copy
   - if logged_in?
-    span.fa-solid.fa-utensils.text-danger
-    span.ml-2 食べたい
-    span.ml-2 1
+    = render 'bookmark_btn', insect: insect

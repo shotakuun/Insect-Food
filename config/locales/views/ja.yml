@@ -36,6 +36,8 @@ ja:
     need_login: ログインが必要です。
     success_user: "%{item}登録が完了しました"
     failure_user: "%{item}登録に失敗しました"
+    bookmark_insect: "%{item}をしました"
+    um_bookmark_insect: "%{item}を外しました"
   password_resets: #コントローラー名を記載
     new: #　各アクションを登録することができる。
       login: パスワードリセット

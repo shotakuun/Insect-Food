@@ -24,4 +24,5 @@
 class Bookmark < ApplicationRecord
   belongs_to :user
   belongs_to :insect
+  validates :user_id, uniqueness: { scope: :insect_id }
 end
