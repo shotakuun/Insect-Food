@@ -22,5 +22,8 @@ Rails.application.routes.draw do
 
   resources :insects, only: %i[index show] do
     resource :bookmarks, only: %i[create destroy]
+    collection do
+      get :bookmarks
+    end
   end
 end
