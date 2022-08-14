@@ -12,4 +12,9 @@ class InsectsController < ApplicationController
     @insect = Insect.find(params[:id])
     gon.chart_data = @insect.graphs.pluck(:data)
   end
+
+  def bookmarks
+    @q = current_user.bookmarks_insect.ransack(params[:q])
+    @bookmarks_insect = @q.result(distinct: true)
+  end
 end

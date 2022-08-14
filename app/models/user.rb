@@ -34,4 +34,20 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   enum role: { general: 0, admin: 1 }
+
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmarks_insect, through: :bookmarks, source: :insect
+
+  def bookmark(insect)
+    bookmarks_insect << insect
+  end
+
+  def unbookmark(insect)
+    bookmarks_insect.delete(insect)
+  end
+
+  # お気に入り登録しているか判定するメソッド
+  def bookmark?(insect)
+    bookmarks_insect.include?(insect)
+  end
 end
