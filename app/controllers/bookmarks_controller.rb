@@ -2,14 +2,12 @@
 
 class BookmarksController < ApplicationController
   def create
-    insect = Insect.find(params[:insect_id])
-    current_user.bookmark(insect)
-    redirect_back fallback_location: root_path, success: t('controller.bookmark_insect', item: Bookmark.model_name.human)
+    @insect = Insect.find(params[:insect_id])
+    current_user.bookmark(@insect)
   end
 
   def destroy
-    insect = current_user.bookmarks.find_by(params[:id]).insect
-    current_user.unbookmark(insect)
-    redirect_back fallback_location: root_path, success: t('controller.um_bookmark_insect', item: Bookmark.model_name.human)
+    @insect = current_user.bookmarks.find_by(params[:id]).insect
+    current_user.unbookmark(@insect)
   end
 end
