@@ -2,6 +2,7 @@
 
 class UserSessionsController < ApplicationController
   skip_before_action :require_login, only: %i[new create gest_login]
+  before_action :logged_in_user, only: %i[new]
 
   def new; end
 
@@ -30,5 +31,11 @@ class UserSessionsController < ApplicationController
     )
     auto_login(@guest_user)
     redirect_to root_url, success: t('controller.gest_login')
+  end
+
+  private
+
+  def logged_in_user
+    redirect_to root_url, danger: t('controller.logged_in_user') if logged_in?
   end
 end

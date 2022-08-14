@@ -29,6 +29,7 @@ ja:
     update_password: パスワードを更新しました
     not_update_password: パスワードを更新しました
     success_login: ログインしました
+    logged_in_user: 既にログインしています
     not_login: ログインに失敗しました
     logout: ログアウトしました。
     gest_login: ゲストとしてログインしました。
