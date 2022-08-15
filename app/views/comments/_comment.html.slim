@@ -8,6 +8,6 @@ tr id=("comment-#{comment.id}")
       p.mb-0 = simple_format(comment.body)
 
   td.d-flex.align-items-center.trash-icon.justify-content-center
-    - if current_user.mine?(comment)
+    - if  logged_in? && current_user.mine?(comment)
       = link_to comment_path(comment), method: :delete, remote: true
         i.fa-solid.fa-trash-can
