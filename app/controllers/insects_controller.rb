@@ -11,6 +11,7 @@ class InsectsController < ApplicationController
   def show
     @insect = Insect.find(params[:id])
     gon.chart_data = @insect.graphs.pluck(:data)
+    @comments = @insect.comments.includes(:user).order(created_at: :desc)
   end
 
   def bookmarks

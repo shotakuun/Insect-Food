@@ -1,0 +1,5 @@
+table.table#js-table-comment
+  - if comments.any?
+    = render comments
+  - else
+    p.text-center.py-2 = t('defaults.not_comment')

@@ -20,4 +20,5 @@ class Insect < ApplicationRecord
   mount_uploader :insect_img, InsectImgUploader
   has_many :graphs, dependent: :destroy # ⅰ、ⅱ
   has_many :bookmarks, dependent: :destroy # ⅰ、ⅱ
+  has_many :comments, dependent: :destroy
 end
