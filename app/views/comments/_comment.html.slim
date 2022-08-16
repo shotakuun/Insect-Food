@@ -9,5 +9,5 @@ tr id=("comment-#{comment.id}")
 
   td.d-flex.align-items-center.trash-icon.justify-content-center
     - if  logged_in? && current_user.mine?(comment)
-      = link_to comment_path(comment), method: :delete, remote: true
+      = link_to comment_path(comment), method: :delete, remote: true, id: "comment#{comment.id}"
         i.fa-solid.fa-trash-can
