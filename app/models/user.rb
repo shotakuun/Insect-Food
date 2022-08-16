@@ -38,6 +38,8 @@ class User < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :bookmarks_insect, through: :bookmarks, source: :insect
 
+  has_many :comments, dependent: :destroy
+
   def bookmark(insect)
     bookmarks_insect << insect
   end
@@ -46,8 +48,11 @@ class User < ApplicationRecord
     bookmarks_insect.delete(insect)
   end
 
-  # お気に入り登録しているか判定するメソッド
   def bookmark?(insect)
     bookmarks_insect.include?(insect)
+  end
+
+  def mine?(comment)
+    id == comment.user_id
   end
 end

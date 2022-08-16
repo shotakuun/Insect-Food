@@ -1,0 +1,12 @@
+tr id=("comment-#{comment.id}")
+  td.comment-td-area
+    = image_tag comment.user.avatar.url, class: 'rounded-circle', size: '50x50'
+  td
+    h3.small.text-left.mb-0.font-weight-bold.pt-0.pb-1= comment.user.name
+    div id=("js-comment-#{comment.id}")
+      p.mb-0 = comment.body
+
+  td.d-flex.align-items-center.trash-icon.justify-content-center
+    - if current_user.mine?(comment)
+      = link_to insect_comment_path(comment), method: :delete, remote: true, data: { confirm: '本当に削除して良いですか?' }
+        i.fa-solid.fa-trash-can

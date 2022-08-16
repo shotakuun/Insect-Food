@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_14_044354) do
+ActiveRecord::Schema.define(version: 2022_08_14_132647) do
 
   create_table "bookmarks", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2022_08_14_044354) do
     t.index ["insect_id"], name: "index_bookmarks_on_insect_id"
     t.index ["user_id", "insect_id"], name: "index_bookmarks_on_user_id_and_insect_id", unique: true
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
+
+  create_table "comments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "body", null: false
+    t.bigint "user_id"
+    t.bigint "insect_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["insect_id"], name: "index_comments_on_insect_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "graphs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -62,5 +72,7 @@ ActiveRecord::Schema.define(version: 2022_08_14_044354) do
 
   add_foreign_key "bookmarks", "insects"
   add_foreign_key "bookmarks", "users"
+  add_foreign_key "comments", "insects"
+  add_foreign_key "comments", "users"
   add_foreign_key "graphs", "insects"
 end

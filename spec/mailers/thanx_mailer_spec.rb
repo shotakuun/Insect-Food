@@ -22,7 +22,7 @@ RSpec.describe ThanxMailer, type: :mailer do
     end
 
     it '正常にメールが送信されていること' do
-      expect(ActionMailer::Base.deliveries.last.subject).to eq('ご登録ありがとうございます')
+      expect(ActionMailer::Base.deliveries.last.subject).to eq('ご登録ありがとうございます。')
     end
   end
 end

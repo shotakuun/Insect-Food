@@ -25,5 +25,6 @@ Rails.application.routes.draw do
     collection do
       get :bookmarks
     end
+    resources :comments, only: %i[create destroy], shallow: true
   end
 end
