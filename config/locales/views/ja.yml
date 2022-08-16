@@ -1,9 +1,9 @@
 ja:
   errors:
     messages:
-      carrierwave_processing_error: 処理できませんでした
-      carrierwave_integrity_error: は許可されていないファイルタイプです
-      carrierwave_download_error: はダウンロードできません
+      carrierwave_processing_error: 処理できませんでした。
+      carrierwave_integrity_error: は許可されていないファイルタイプです。
+      carrierwave_download_error: はダウンロードできません。
       extension_whitelist_error: "のアップロードに失敗しました。アップロードできるファイルタイプ: %{allowed_types}"
       extension_blacklist_error: "のアップロードに失敗しました。アップロードできるファイルタイプ: %{allowed_types}"
       content_type_whitelist_error: "のアップロードに失敗しました。アップロードできるファイルタイプ: %{allowed_types}"
@@ -21,26 +21,32 @@ ja:
     header_p1: 昆虫食にチャレンジしたい人に向けて作ったサービスです。
     header_p2: 昆虫診断を行うと自分にとって最高のパートナー（昆虫）と出会えることができます。
     search_insects: 昆虫名 例）カブトムシ、夏の王者
+    comments: コメント
+    not_comment: コメントはありません
+    delete_comment: "%{item}を削除しますか？"
   mailers:
-    create_user: ご登録ありがとうございます
+    create_user: ご登録ありがとうございます。
     resets_password: パスワードのリセットについて
   controller:
-    sent_resets_password: パスワードリセットメールを送りました
-    update_password: パスワードを更新しました
-    not_update_password: パスワードを更新しました
-    success_login: ログインしました
-    not_login: ログインに失敗しました
+    sent_resets_password: パスワードリセットメールを送りました。
+    update_password: パスワードを更新しました。
+    not_update_password: パスワードを更新しました。
+    success_login: ログインしました。
+    logged_in_user: 既にログインしています。
+    not_login: ログインに失敗しました。
     logout: ログアウトしました。
     gest_login: ゲストとしてログインしました。
     profiles_user: プロフィールを更新しました。
     need_login: ログインが必要です。
-    success_user: "%{item}登録が完了しました"
-    failure_user: "%{item}登録に失敗しました"
-  password_resets: #コントローラー名を記載
-    new: #　各アクションを登録することができる。
+    success_user: "%{item}登録が完了しました。"
+    failure_user: "%{item}登録に失敗しました。"
+    bookmark_insect: "%{item}をしました。"
+    um_bookmark_insect: "%{item}を外しました。"
+  password_resets:
+    new:
       login: パスワードリセット
       submit: メールを送信
-    edit: #　各アクションを登録することができる。
+    edit:
       edit_password: パスワード更新
       new_password: 新しいパスワード
       new_password_confirmation: 新しいパスワード確認
@@ -81,6 +87,7 @@ ja:
       not_insect: 食べられる虫がいません。
     show:
       title: 食べれる虫詳細
+      comments: コメント
       back_index_page: 一覧ページへ戻る
       introduction: 虫紹介
       name: 虫の名前：
@@ -89,3 +96,6 @@ ja:
       only_store: 通販：
       not_insect_store: ※季節によっては取り扱いが終了している場合があります。
       video_appearance_scene: 登場シーン
+    bookmarks:
+      title: お気に入りした虫
+      faborite_insect: お気に入りした虫がいません。

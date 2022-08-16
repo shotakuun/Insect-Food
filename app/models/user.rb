@@ -34,4 +34,25 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   enum role: { general: 0, admin: 1 }
+
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmarks_insect, through: :bookmarks, source: :insect
+
+  has_many :comments, dependent: :destroy
+
+  def bookmark(insect)
+    bookmarks_insect << insect
+  end
+
+  def unbookmark(insect)
+    bookmarks_insect.delete(insect)
+  end
+
+  def bookmark?(insect)
+    bookmarks_insect.include?(insect)
+  end
+
+  def mine?(comment)
+    id == comment.user_id
+  end
 end

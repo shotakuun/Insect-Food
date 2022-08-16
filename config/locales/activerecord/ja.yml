@@ -3,6 +3,9 @@ ja:
     models:
       user: ユーザー
       insect: 昆虫
+      graph: 昆虫のステータス
+      bookmark: お気に入り
+      comment: コメント
     attributes:
       user:
         name: ニックネーム
@@ -19,5 +22,5 @@ ja:
         online_store_link: 通販サイト
         video_url_link: 虫の食べ方
         video_appearance_scene: 虫の登場シーン
-
-
+      comments:
+        body: コメント

@@ -19,6 +19,13 @@ RSpec.describe 'ログインページ', type: :system do
         expect(page).to have_content('ログインしました')
         expect(page).to have_content(user.name)
       end
+
+      it 'ログイン済みのユーザーがログインページに遷移を行うとトップページに遷移されること' do
+        login(user)
+        visit login_path
+        expect(current_path).to eq(root_path)
+        expect(page).to have_content('既にログインしています')
+      end
     end
 
     context '失敗系' do

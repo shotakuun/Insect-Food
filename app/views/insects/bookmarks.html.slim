@@ -1,0 +1,11 @@
+- content_for(:title, t('.title'))
+
+.mx-5.px-3
+  h3.text-left = t('.title')
+  = render 'shared/search', q: @q
+
+  .row.mb-5
+    - if @bookmarks_insect.any?
+      = render @bookmarks_insect
+    - else
+      p.m-4 = t('.faborite_insect')
