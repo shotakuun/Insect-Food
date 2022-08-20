@@ -34,6 +34,12 @@ group :development, :test do
   gem "slim-rails"
   gem "html2slim"
   gem "rails_best_practices"
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec'
+  gem 'rubocop-rspec-focused', require: false
 end
 
 group :development do
@@ -43,8 +49,6 @@ group :development do
   gem "spring"
   gem "rails-erd"
   gem "letter_opener_web", "~> 1.0"
-  gem "rubocop", require: false
-  gem 'rubocop-rspec'
   gem "brakeman", require: false
 end
 
