@@ -44,6 +44,7 @@ group :development do
   gem "rails-erd"
   gem "letter_opener_web", "~> 1.0"
   gem "rubocop", require: false
+  gem 'rubocop-rspec'
   gem "brakeman", require: false
 end
 
