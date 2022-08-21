@@ -1,1 +1,20 @@
-p = @result_insect.name
+- content_for(:title, t('.title'))
+
+#particles-js
+.m-3
+  h3.text-left.result-title あなたへのおすすめの虫は...
+
+.row.mt-5.result-area.mb-5
+  .col-7.border.mx-auto.result-insect-area.p-2.rounded
+    h3.insect-name = "合計#{@result_score}点の#{@result_insect.name}です!!"
+    .row.mt-5
+      .col-12
+        = image_tag @result_insect.insect_img.url, class:'d-block mx-auto mb-3', width: '350'
+        h3.mb-2 診断結果
+        h4.text-center.p-0.mb-4 すごい満点です!いろんな虫を食べてみましょう！
+
+        .d-flex.w-100.justify-content-center.my-3.mb-5
+          .
+            = link_to '虫詳細ページへ', insect_path(@result_insect), class: 'nav-link border bg-primary text-light btn-blue circle mr-5 p-4'
+          .
+            = link_to 'もう一回診断を行う', insect_questions_path, class: 'nav-link border bg-danger text-light btn-red circle ml-5 p-4'

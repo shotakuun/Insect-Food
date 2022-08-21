@@ -102,3 +102,5 @@ ja:
   questions:
     questions:
       title: 昆虫食診断ページ
+    results:
+      title: 診断結果

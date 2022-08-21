@@ -15,6 +15,7 @@ import "./scroll";
 import "./flash";
 import "./preview";
 import "./quetion";
+import "./result";
 
 global.Chart = Chart;
 Rails.start();
