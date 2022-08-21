@@ -11,7 +11,7 @@
       .col-12
         = image_tag @result_insect.insect_img.url, class:'d-block mx-auto mb-3', width: '350'
         h3.mb-2 診断結果
-        h4.text-center.p-0.mb-4 すごい満点です!いろんな虫を食べてみましょう！
+        h4.text-center.p-0.mb-4 = @result.rank_comment
 
         .d-flex.w-100.justify-content-center.my-3.mb-5
           .

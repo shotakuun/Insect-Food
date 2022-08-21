@@ -5,7 +5,9 @@ class QuestionsController < ApplicationController
   def questions; end
 
   def results
-    @result_insect = Insect.find(1)
+    @result = InsectRank.find_by(score: params[:point])
+    set_num = rand(1..@result.insects.length)
+    @result_insect = @result.insects.find(set_num)
     @result_score = params[:point]
   end
 end

@@ -63,6 +63,9 @@ document.addEventListener("turbolinks:load", function () {
       $("ul").remove();
       $(".progress-bar.progress-bar").remove();
 
+      if (point === 0) {
+        point = 1;
+      }
       window.location.href = "/results?point=" + point;
     }
   });

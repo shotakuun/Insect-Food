@@ -6,6 +6,7 @@ ja:
       graph: 昆虫のステータス
       bookmark: お気に入り
       comment: コメント
+      insect_rank: 昆虫ランク
     attributes:
       user:
         name: ニックネーム
@@ -24,3 +25,6 @@ ja:
         video_appearance_scene: 虫の登場シーン
       comments:
         body: コメント
+      insect_rank:
+        rank_comment: ランクコメント
+        score: 昆虫スコア
