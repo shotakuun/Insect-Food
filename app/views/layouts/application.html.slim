@@ -2,14 +2,13 @@ doctype html
 html
   head
   = render 'shared/head'
-  - unless current_page?(insect_questions_path)
+  - unless current_page?(insect_questions_path) || params[:action] == "results"
     = render 'shared/navbar'
     = render 'shared/flash_message'
   body
     .container
       = yield
-    - unless current_page?(insect_questions_path)
+  - unless current_page?(insect_questions_path) || params[:action] == "results"
       = render 'shared/footer'
-
   javascript:
     | $('body').fadeIn(700);

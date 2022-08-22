@@ -1,7 +1,8 @@
 document.addEventListener("turbolinks:load", function () {
-  $(".result-title").fadeIn(1000);
-  $(".result-area").delay(2000).fadeIn(2000);
+  $("#before_animation").delay(1000).fadeIn(2000);
+  $("#before_animation").delay(1000).fadeOut(1500);
 
+  $(".result-area").delay(6000).fadeIn(1000);
   particlesJS("particles-js", {
     particles: {
       number: {
