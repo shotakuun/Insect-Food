@@ -27,4 +27,7 @@ Rails.application.routes.draw do
     end
     resources :comments, only: %i[create destroy], shallow: true
   end
+
+  get 'insect_questions', to: 'questions#questions'
+  get 'results', to: 'questions#results'
 end
