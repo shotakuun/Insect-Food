@@ -16,8 +16,10 @@ import "./flash";
 import "./preview";
 import "./quetion";
 import "./result";
+import "./raty";
 
 global.Chart = Chart;
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
+window.$ = window.jQuery = require("jquery");

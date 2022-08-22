@@ -1,0 +1,44 @@
+<% content_for(:title, t('.result')) %>
+<div id="particles-js"></div>
+<div class="m-3">
+  <h3 class="text-left result-title"><%= t('.recommendation')%></h3>
+</div>
+
+<div class="row mt-5 result-area mb-5">
+  <div class="col-8 border mx-auto result-insect-area p-2 rounded text-center">
+    <h3 class="insect-name"><%= ::Temple::Utils.escape_html(("合計#{@result_score}点の#{@result_insect.name}です!!")) %></h3>
+    <%= image_tag @result_insect.insect_img.url, class: 'd-block mx-auto mb-3', width: '350' %>
+    <div class="row">
+      <div class="col">
+        <h3 class="mb-3 p-0"><%= t('.result')%></h3>
+        <div id="star-rate-<%= @result.id %>"></div>
+        <div class="eval-star my-3">
+          <%= @result.score %>/5点
+        </div>
+        <h4 class='text-center p-0'><%= @result.rank_comment %></h4>
+      </div>
+      <div class='d-flex w-100 justify-content-center my-3'>
+        <div class="form-footer mr-4 p-0">
+          <p><%= link_to t('.insect_show'), insect_path(@result_insect)%></p>
+        </div>
+        <div class="form-footer p-0">
+          <p><%= link_to t(".one_more_questions"), insect_questions_path %></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+ $('#star-rate-<%= @result.id %>').empty()
+  $('#star-rate-<%= @result.id %>').raty({
+    size: 36,
+    starOff:  '<%= asset_path('star-off.png') %>',
+    starOn : '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+    readOnly: true,
+    score: <%= @result.score %>,
+  });
+ </script>
