@@ -10,12 +10,16 @@ import "channels";
 import "@fortawesome/fontawesome-free/js/all";
 import Chart from "chart.js/auto";
 
+import "./graph";
 import "./scroll";
 import "./flash";
 import "./preview";
-require("./graph");
+import "./quetion";
+import "./result";
+import "./raty";
 
 global.Chart = Chart;
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
+window.$ = window.jQuery = require("jquery");

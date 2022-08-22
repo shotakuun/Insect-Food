@@ -18,6 +18,11 @@ User.create!(
   ]
 )
 
+InsectRank.create!([{
+  rank_comment: '満点です！もっと違う虫にチャレンジしてみましょう！',
+  score: 5
+}])
+
 Insect.create!(
   [
     {
@@ -29,6 +34,7 @@ Insect.create!(
       online_store_link: "https://takeo.tokyo/?pid=116875100",
       video_url_link: "-vATsIe0jBs",
       video_appearance_scene: "5分25~",
+      insect_rank: InsectRank.find(1),
     },
   ]
 )
