@@ -1,4 +1,11 @@
 document.addEventListener("turbolinks:load", function () {
+  $('#danger-insect').delay(1000).fadeIn(1000)
+  $('#danger-insect').fadeOut(2000)
+  // ↑↑↑ 質問文が表示される前に注意文を表示するエリア
+
+  // ↓↓↓ 質問文が表示される前に注意文を表示するエリア
+  $('#questions').delay(4000).fadeIn(1000)
+
   const h2 = document.getElementById("h2");
   const ul = document.getElementById("ul");
   const randomNums = [1, 2, 3, 4, 5];

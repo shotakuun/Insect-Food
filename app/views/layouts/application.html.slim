@@ -2,9 +2,14 @@ doctype html
 html
   head
   = render 'shared/head'
-  = render 'shared/navbar'
-  = render 'shared/flash_message'
+  - unless current_page?(insect_questions_path)
+    = render 'shared/navbar'
+    = render 'shared/flash_message'
   body
     .container
       = yield
-    = render 'shared/footer'
+    - unless current_page?(insect_questions_path)
+      = render 'shared/footer'
+
+  javascript:
+    | $('body').fadeIn(700);

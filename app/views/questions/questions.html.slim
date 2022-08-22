@@ -1,14 +1,19 @@
 - content_for(:title, t('.title'))
 
-.mx-3
-  h3.mb-4.text-left = t('.title')
+div#questions
+  .border.questions_ul.mx-auto.p-5
+    h2.q-number Q1
+    h2#h2.text-center.pb-5
+    ul#ul.p-0
+    .progress.mt-5
+      .progress-bar.progress-bar-striped.progress-bar-animated aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" style=("width: 0%")
+    p.text-center.mt-3
+      span 0
+      | /5
 
-.border.questions_ul.mx-auto.p-5
-  h2.q-number Q1
-  h2#h2.text-center.pb-5
-  ul#ul.p-0
-  .progress.mt-5
-    .progress-bar.progress-bar-striped.progress-bar-animated aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" style=("width: 0%")
-  p.text-center.mt-3
-    span 0
-    | /5
+div#danger-insect
+  h3.pb-0
+    | 昆虫食の生食は
+    span.text-danger> 大変危険
+    | ですので
+  h3 しっかり火を通してからお召し上がりください
