@@ -1,4 +1,3 @@
 default_url_options:
   host: 'https://insect-food.jp/'
-  aws: 'http://insect-food.s3.amazonaws.com'
-
+  aws: 'https://d3g87s8itq6cxs.cloudfront.net'
