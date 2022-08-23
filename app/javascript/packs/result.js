@@ -1,4 +1,13 @@
 document.addEventListener("turbolinks:load", function () {
+  window.onload = function () {
+    history.pushState(null, null, null);
+
+    window.addEventListener("popstate", function (e) {
+      history.pushState(null, null, null);
+      return;
+    });
+  };
+
   $("#before_animation").delay(1000).fadeIn(2000);
   $("#before_animation").delay(1000).fadeOut(1500);
 
