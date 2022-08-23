@@ -26,12 +26,12 @@ gem "ransack"
 gem "gon"
 gem "sentry-ruby"
 gem "sentry-rails"
+gem "slim-rails"
 
 group :development, :test do
   gem "irbtools", require: "irbtools/binding"
   gem "annotate"
   gem "pry-byebug"
-  gem "slim-rails"
   gem "html2slim"
   gem "rails_best_practices"
   gem 'rspec-rails', '~> 5.0.0'
