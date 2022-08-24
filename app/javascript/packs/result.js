@@ -8,10 +8,13 @@ document.addEventListener("turbolinks:load", function () {
     });
   };
 
-  $("#before_animation").delay(1000).fadeIn(2000);
-  $("#before_animation").delay(1000).fadeOut(1500);
+  $("#before_animation").delay(1000).fadeIn(2500);
+  $("#before_animation").delay(500).fadeOut(1000);
 
-  $(".result-area").delay(6000).fadeIn(1000);
+  $("#before_h1").delay(6500).fadeIn(1500);
+  $("#before_h1").delay(500).fadeOut(1000);
+
+  $(".result-area").delay(10000).fadeIn(1000);
   particlesJS("particles-js", {
     particles: {
       number: {
@@ -30,7 +33,7 @@ document.addEventListener("turbolinks:load", function () {
           width: 0,
         },
         polygon: {
-          nb_sides: 4, //多角形の角の数
+          nb_sides: 5, //多角形の角の数
         },
       },
       opacity: {
