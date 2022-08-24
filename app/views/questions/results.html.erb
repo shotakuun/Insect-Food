@@ -1,21 +1,21 @@
 <% content_for(:title, t('.result')) %>
 <div id='before_animation'>
   <div id="load">
-      <div class='fontsize1'>G</div>
-      <div class='fontsize2'>N</div>
-      <div class='fontsize3'>I</div>
-      <div class='fontsize4'>D</div>
-      <div class='fontsize5'>A</div>
-      <div class='fontsize6'>O</div>
-      <div class='fontsize7'>L</div>
+      <div class='fontsize1'>す</div>
+      <div class='fontsize2'>で</div>
+      <div class='fontsize3'>中</div>
+      <div class='fontsize4'>断</div>
+      <div class='fontsize5'>診</div>
     </div>
   </div>
 </div>
 
+<h1 class='text-center' id='before_h1'>あなたへのおすすめの虫は...</h1>
+
 <div id="particles-js"></div>
-<div class="row mt-5 result-area mb-5">
+<div class="row result-area mb-5">
   <div class="col-8 mx-auto result-insect-area p-2 rounded text-center">
-      <h3 class="insect-name"><%= ::Temple::Utils.escape_html(("合計#{@result_score}点の#{@result_insect.name}です!!")) %></h3>
+      <h2 class="mb-5 insect-name texe-center"><%= ::Temple::Utils.escape_html(@result_insect.name) %></h2>
       <%= image_tag @result_insect.insect_img.url, class: 'd-block mx-auto mb-3', width: '350' %>
       <div class="row">
         <div class="col">
