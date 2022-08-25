@@ -3,6 +3,11 @@
   padding-top: 500px;
 }
 
+#before_h1 {
+  display: none;
+  padding-top: 400px;
+}
+
 #result-insect {
   display: none;
 }
@@ -13,6 +18,7 @@
 
 .result-area {
   display: none;
+  margin-top: 100px;
 }
 
 #particles-js {
@@ -53,6 +59,15 @@
 .fontsize7 {
   font-size: 20px;
   color: #fd7e14;
+}
+
+.twitter-button {
+  font-size: 30px;
+  width: 114px;
+}
+
+.form-footer{
+  line-height:45px
 }
 
 #load {

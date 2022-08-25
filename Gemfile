@@ -27,6 +27,7 @@ gem "gon"
 gem "sentry-ruby"
 gem "sentry-rails"
 gem "slim-rails"
+gem 'meta-tags'
 
 group :development, :test do
   gem "irbtools", require: "irbtools/binding"

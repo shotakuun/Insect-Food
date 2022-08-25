@@ -21,6 +21,9 @@ AllCops:
 Metrics/BlockLength:
   Max: 100
 
+Metrics/MethodLength:
+  Max: 1000
+
 require:
   - rubocop/rspec/focused
 
