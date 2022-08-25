@@ -24,7 +24,9 @@
           <div class="eval-star my-3">
             <%= @result.score %>/5点
           </div>
+
           <h4 class='text-center p-0'><%= @result.rank_comment %></h4>
+
         </div>
         <div class='d-flex w-100 justify-content-center my-3'>
           <div class="form-footer mr-4 p-0">
@@ -33,7 +35,12 @@
           <div class="form-footer p-0">
             <p><%= link_to t(".go_to_toppage"), root_path %></p>
           </div>
+          <div class='twitter-button'>
+            <%= link_to "https://twitter.com/share?&url=https://insect-food.jp&text=あなたのへのおすすめの虫は【#{@result_insect.name}】です！&hashtags=InsectFood,昆虫食,昆虫,ゲテモノ,診断&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer' do %>
+              <i class="fab fa-twitter share-button"></i>
+            <% end %>
           </div>
+        </div>
       </div>
     </div>
   </div>
