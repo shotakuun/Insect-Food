@@ -25,8 +25,7 @@ module ApplicationHelper
       canonical: request.original_url, # 優先されるurl
       icon: [
         { href: image_url('favicon.ico') },
-        { href: image_url('apple-touch-icon.png'),
-          rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' }
+        { rel: 'favicon.ico', sizes: '180x180', type: 'image/jpg' }
       ],
       og: {
         site_name: :site,
