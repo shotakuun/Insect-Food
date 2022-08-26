@@ -2,7 +2,8 @@
 
 Rails.application.routes.draw do
   root to: 'top#index'
-
+  get '/terms', to: 'static_pages#terms'
+  get '/privacy', to: 'static_pages#privacy'
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
