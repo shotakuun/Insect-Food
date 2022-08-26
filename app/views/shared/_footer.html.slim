@@ -1,8 +1,8 @@
 footer.py-3.px-5
   .d-flex.justify-content-between
     .
-      = link_to t('defaults.footer_terms'), root_path, class: 'navbar-brand text-light mx-3'
-      = link_to t('defaults.footer_poricy'), root_path, class: 'navbar-brand text-light'
+      = link_to t('defaults.footer_terms'), terms_path, class: 'navbar-brand text-light mx-3'
+      = link_to t('defaults.footer_poricy'), privacy_path, class: 'navbar-brand text-light'
       = link_to t('defaults.footer_contact'), root_path, class: 'navbar-brand text-light mr-4'
       = link_to "https://twitter.com/share?&url=https://insect-food.jp/&text=%0D%0A食べれる昆虫を検索・診断の結果で自分に合った昆虫を探せるサービス InsectFood&hashtags=昆虫,昆虫食,ゲテモノ,個人開発&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer', class: 'text-white twitter-icon'
         i.fab.fa-twitter
