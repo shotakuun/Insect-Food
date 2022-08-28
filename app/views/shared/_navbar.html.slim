@@ -1,11 +1,13 @@
 nav.nav-bgc.navbar.text-light.px-lg-5.py-lg-3
   .container-fluid
     = link_to 'Insect Food', root_path, class: 'navbar-brand text-light'
-    .nav-menu.d-lg-flex.d-none.d-md-block.pc-size
+    = render 'shared/hamberger_on_list.html.slim'
+    .nav-menu.d-lg-flex.d-none.d-lg-block
       = link_to insects_path, class: 'text-light text-decoration-none' do
         '食べれる虫一覧
-        span.text-light.fa-solid.fa-utensils.icon-margin
+        span.text-light.fa-solid.fa-utensils.icon-margin.ml-2
       - if logged_in?
         = render 'shared/login_nav'
       - else
         = render 'shared/before_login_nav'
+    = render 'shared/hamberger'
