@@ -15,8 +15,8 @@
 <div id="particles-js"></div>
 <div class="row result-area mb-5">
   <div class="col-8 mx-auto result-insect-area p-2 rounded text-center">
-      <h2 class="mb-5 insect-name texe-center"><%= ::Temple::Utils.escape_html(@result_insect.name) %></h2>
-      <%= image_tag @result_insect.insect_img.url, class: 'd-block mx-auto mb-3', width: '350' %>
+      <h2 class="mb-3 insect-name texe-center"><%= @result_insect.name %>です！！</h2>
+      <%= image_tag @result_insect.insect_img.url, class: 'd-block mx-auto mb-3', width: '300' %>
       <div class="row">
         <div class="col">
           <h3 class="mb-3 p-0"><%= t('.result')%></h3>
@@ -36,7 +36,7 @@
             <p><%= link_to t(".go_to_toppage"), root_path %></p>
           </div>
           <div class='twitter-button'>
-            <%= link_to "https://twitter.com/share?&url=https://insect-food.jp&text=あなたのへのおすすめの虫は【#{@result_insect.name}】です！&hashtags=InsectFood,昆虫食,昆虫,ゲテモノ,診断&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer' do %>
+            <%= link_to "https://twitter.com/share?&url=https://insect-food.jp&text=自分へのおすすめの虫は【#{@result_insect.name}】でした！&hashtags=InsectFood,昆虫食,昆虫,ゲテモノ,診断&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer' do %>
               <i class="fab fa-twitter share-button"></i>
             <% end %>
           </div>

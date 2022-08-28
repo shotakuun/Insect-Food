@@ -5,7 +5,7 @@ class InsectsController < ApplicationController
 
   def index
     @q = Insect.ransack(params[:q])
-    @insects = @q.result(distinct: true)
+    @insects = @q.result(distinct: true).page(params[:page]).per(6)
   end
 
   def show
@@ -16,6 +16,6 @@ class InsectsController < ApplicationController
 
   def bookmarks
     @q = current_user.bookmarks_insect.ransack(params[:q])
-    @bookmarks_insect = @q.result(distinct: true)
+    @bookmarks_insect = @q.result(distinct: true).page(params[:page]).per(6)
   end
 end
