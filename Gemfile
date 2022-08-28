@@ -28,6 +28,7 @@ gem "sentry-ruby"
 gem "sentry-rails"
 gem "slim-rails"
 gem 'meta-tags'
+gem 'kaminari', '~> 0.17.0'
 
 group :development, :test do
   gem "irbtools", require: "irbtools/binding"

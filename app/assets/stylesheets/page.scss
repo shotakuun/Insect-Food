@@ -1,0 +1,29 @@
+.current {
+  color: #fff;
+  background-color: #5ea351;
+  border-radius: 20px;
+  line-height: 30px;
+}
+.pagination {
+  span {
+    a {
+      color: #222;
+      font-size: 20px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  justify-content: center;
+  .page {
+    margin: 0 5px 0;
+    text-align: center;
+    width: 20px;
+  }
+  .prev {
+    margin: 0 10px 0;
+  }
+  .next {
+    margin: 0 10px 0;
+  }
+}
