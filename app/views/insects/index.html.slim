@@ -1,6 +1,6 @@
 - content_for(:title, t('.title'))
 
-.mx-5.px-3
+.m-5
   h3.text-left = t('.title')
   = render 'shared/search', q: @q
 
@@ -9,3 +9,5 @@
       = render @insects
     - else
       p.m-4 = t('.not_insect')
+
+  = paginate @insects
