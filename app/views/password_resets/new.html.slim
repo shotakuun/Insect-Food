@@ -1,9 +1,12 @@
 - content_for(:title, t('.login'))
 
-.form-wrapper
-  h3 = t('.login')
-  = form_with url: password_resets_path, local: true do |f|
-    .form-item
-      = f.email_field:email,  placeholder: t('.login'), required: true, maxlenght:'255'
-    .button-panel
-      = f.submit t('.submit'), class: 'submit-btn'
+
+.form_padding_top
+  .mx-3
+    .form-wrapper
+      h3.form_title = t('.login')
+      = form_with url: password_resets_path, local: true do |f|
+        .form-item
+          = f.email_field:email,  placeholder: t('.login'), required: true, maxlenght:'255'
+        .button-panel
+          = f.submit t('.submit'), class: 'submit-btn'

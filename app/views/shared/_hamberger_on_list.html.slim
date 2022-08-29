@@ -1,0 +1,16 @@
+div#toggle-nav.d-lg-none
+  .inner.py-5.my-5.mx-5.px-4.text-left
+    = link_to insects_path, class: 'text-decoration-none d-block text-light mb-3' do
+      '食べれる虫一覧
+      span.text-lg-light.fa-solid.fa-utensils.icon-margin
+    - if logged_in?
+      = render 'shared/login_nav'
+    - else
+      = render 'shared/before_login_nav'
+    = link_to terms_path, class: 'text-decoration-none d-block text-light mb-3' do
+      '利用規約
+    = link_to privacy_path, class: 'text-decoration-none d-block text-light mb-3' do
+      'プライバシーポリシー
+    = link_to t('defaults.footer_contact'), 'https://docs.google.com/forms/d/e/1FAIpQLScQwylK4RiiSoOLDsVChL6B8u4Io2rLOovMsu2O0z9xJYojQQ/viewform', class: 'navbar-brand text-light mb-3 mb-lg-0 d-block p-0'
+    = link_to "https://twitter.com/share?&url=https://insect-food.jp/&text=%0D%0A食べれる昆虫を検索・診断の結果で自分に合った昆虫を探せるサービス&hashtags=昆虫,昆虫食,ゲテモノ,個人開発&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer', class: 'text-white twitter-icon'
+        i.fab.fa-twitter

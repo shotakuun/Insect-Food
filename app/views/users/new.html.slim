@@ -1,35 +1,36 @@
 - content_for(:title, t('.title'))
 
-.form-wrapper
-  h3 = t('.title')
-  = form_with model: @user, url: sign_up_path, local: true do |f|
-    .form-item
-      = f.text_field :name, placeholder: t('.name'), required: true, minlength:"3", maxlenght:'255'
-      - if @user.errors.include?(:name)
-      p style="color: red;"= @user.errors.full_messages_for(:name).first
-    .form-item
-      = f.email_field:email,  placeholder: t('.mail'), required: true, maxlenght:'255'
-      - if @user.errors.include?(:email)
-      p style="color: red;"= @user.errors.full_messages_for(:email).first
-    .form-item
-      = f.password_field :password, placeholder: t('.password'), required: true, minlength:"3", maxlenght:'255', id:'password'
-    .form-item
-      = f.password_field :password_confirmation, placeholder: t('.password_confirmation'), required: true, oninput:"CheckPasswordConfirmation(this)"
-    .button-panel
-      = f.submit class: 'submit-btn'
-  .form-footer
-    p
-      = link_to t('.login'), login_path
+.form_padding_top
+  .mx-3
+    .form-wrapper.p-4
+      h3.form_title = t('.title')
+      = form_with model: @user, url: sign_up_path, local: true do |f|
+        .form-item
+          = f.text_field :name, placeholder: t('.name'), required: true, minlength:"3", maxlenght:'255'
+          - if @user.errors.include?(:name)
+          p style="color: red;"= @user.errors.full_messages_for(:name).first
+        .form-item
+          = f.email_field:email,  placeholder: t('.mail'), required: true, maxlenght:'255'
+          - if @user.errors.include?(:email)
+          p style="color: red;"= @user.errors.full_messages_for(:email).first
+        .form-item
+          = f.password_field :password, placeholder: t('.password'), required: true, minlength:"3", maxlenght:'255', id:'password'
+        .form-item
+          = f.password_field :password_confirmation, placeholder: t('.password_confirmation'), required: true, oninput:"CheckPasswordConfirmation(this)"
+        .button-panel
+          = f.submit class: 'submit-btn'
+      .form-footer.p-3
+        p.mb-0
+          = link_to t('.login'), login_path
 
-  script
-    |
-      function CheckPasswordConfirmation(password_confirmation){
-        const val1 = document.getElementById("password").value
-        const val2 = password_confirmation.value
-        if(val1 != val2){
-          password_confirmation.setCustomValidity("入力値が一致しません。");
-        }else{
-          password_confirmation.setCustomValidity("");
-        }
-      }
-Footer
+      script
+        |
+          function CheckPasswordConfirmation(password_confirmation){
+            const val1 = document.getElementById("password").value
+            const val2 = password_confirmation.value
+            if(val1 != val2){
+              password_confirmation.setCustomValidity("入力値が一致しません。");
+            }else{
+              password_confirmation.setCustomValidity("");
+            }
+          }
