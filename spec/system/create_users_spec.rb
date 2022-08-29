@@ -5,9 +5,7 @@ require 'rails_helper'
 RSpec.describe 'ユーザーの作成', type: :system do
   describe 'ユーザー作成ページ' do
     before do
-      visit(root_path)
-      click_link('新規登録')
-      expect(current_path).to eq(sign_up_path)
+      visit(sign_up_path)
     end
 
     context '正常系' do

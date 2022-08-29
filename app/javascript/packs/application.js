@@ -17,6 +17,8 @@ import "./preview";
 import "./quetion";
 import "./result";
 import "./raty";
+import "./hambuger";
+
 
 global.Chart = Chart;
 Rails.start();

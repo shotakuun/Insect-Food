@@ -1,3 +1,3 @@
 = form_with model: comment, url: [insect, comment], id: 'new-comment', local: false do |f|
   = f.text_area :body, class: 'form-control', placeholder: t('defaults.comments'), required: true, maxlenght:'255',  minlength:"3", id:"js-new-comment-body"
-  = f.submit class: 'btn btn-primary my-3'
+  = f.submit class: 'btn btn-primary my-3 btn-comment'

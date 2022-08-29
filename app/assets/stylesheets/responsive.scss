@@ -1,0 +1,98 @@
+@media screen and (max-width: 992px) {
+  .pc-size {
+    display: none;
+  }
+
+  .sm-h3-size {
+    text-align: left;
+    font-size: 16px;
+    padding-top: 0;
+  }
+
+  .sm-h1-size {
+    font-size: 24px;
+  }
+
+  .sm-font-size {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .sm-font-p-size {
+    font-size: 16px;
+  }
+
+  #toggle-nav {
+    display: none;
+  }
+
+  .text-link {
+    color: #333;
+  }
+
+  .alert {
+    right: 10px;
+    top: 70px;
+  }
+
+  .title_padding_top {
+    padding-top: 6rem;
+  }
+
+  .form_title {
+    font-size: 1.5rem;
+  }
+
+  .show_title {
+    font-size: 1rem;
+  }
+
+  .btn-comment {
+    width: 100%;
+  }
+
+  .table-pc {
+    display: none;
+  }
+
+  #danger-insect {
+    display: none;
+    padding-top: 230px;
+  }
+
+  //質問ページ
+  .que_title {
+    font-size: 1.6rem;
+  }
+
+  .questions_ul {
+    width: 100%;
+    ul {
+      li {
+        padding: 10px 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  #questions {
+    padding-top: 100px;
+  }
+
+  .q-number {
+    font-size: 1.5rem;
+  }
+
+  .sm-que-title {
+    font-size: 1.5rem;
+  }
+
+  #before_h1 {
+    padding-top: 300px;
+  }
+
+  //結果ページ
+  .pc-result-imag {
+    display: none;
+  }
+}
