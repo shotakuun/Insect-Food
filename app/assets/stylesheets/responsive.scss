@@ -54,4 +54,45 @@
   .table-pc {
     display: none;
   }
+
+  #danger-insect {
+    display: none;
+    padding-top: 230px;
+  }
+
+  //質問ページ
+  .que_title {
+    font-size: 1.6rem;
+  }
+
+  .questions_ul {
+    width: 100%;
+    ul {
+      li {
+        padding: 10px 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  #questions {
+    padding-top: 100px;
+  }
+
+  .q-number {
+    font-size: 1.5rem;
+  }
+
+  .sm-que-title {
+    font-size: 1.5rem;
+  }
+
+  #before_h1 {
+    padding-top: 300px;
+  }
+
+  //結果ページ
+  .pc-result-imag {
+    display: none;
+  }
 }
