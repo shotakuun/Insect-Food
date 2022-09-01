@@ -1,7 +1,7 @@
 nav.nav-bgc.navbar.text-light.px-lg-5.py-lg-3.navbar-fixed
   .container-fluid
     = link_to 'Insect Food', root_path, class: 'navbar-brand text-light'
-    = render 'shared/hamberger_on_list.html.slim'
+    = render 'shared/hamberger_on_list'
     .nav-menu.d-lg-flex.d-none.d-lg-block
       = link_to insects_path, class: 'text-light text-decoration-none' do
         '食べれる虫一覧

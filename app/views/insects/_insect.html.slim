@@ -1,7 +1,6 @@
-.mt-3.col-md-6.col-lg-4
+.my-lg-5.col-md-6.col-lg-4.my-4
   = link_to insect_path(insect), class:'text-decoration-none text-dark' do
-    = image_tag insect.insect_img.url, class:'d-block mx-auto mb-3', width: '250'
-    p.mb-0.font-weight-bold = insect.name
-    p.mb-2 = insect.catch_copy
+    = image_tag insect.insect_img.url, class:'d-block mx-auto mb-3', width: '200', height: '150'
+    p.mb-0.font-weight-bold.text-center = insect.name
   - if logged_in?
     = render 'bookmark_btn', insect: insect

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_21_074631) do
+ActiveRecord::Schema.define(version: 2022_09_01_104748) do
 
   create_table "bookmarks", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 2022_08_21_074631) do
 
   create_table "insects", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
-    t.string "catch_copy"
     t.string "introduction"
     t.string "insect_img"
     t.text "cooking_store_link"

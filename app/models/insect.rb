@@ -5,7 +5,6 @@
 # Table name: insects
 #
 #  id                     :bigint           not null, primary key
-#  catch_copy             :string(255)
 #  cooking_store_link     :text(65535)
 #  insect_img             :string(255)
 #  insect_recipe          :string(255)

@@ -14,13 +14,7 @@ RSpec.describe '検索結果', type: :system do
     expect(page).to have_content(insect.name)
   end
 
-  it 'キャッチコピーを検索した場合、正しい結果が表示されること' do
-    fill_in('search_eria', with: insect.catch_copy)
-    click_button '検索'
-    expect(page).to have_content(insect.catch_copy)
-  end
-
-  it '名前、キャッチコピーどちらにも含まれていない場合、表示されないこと' do
+  it '虫の名前が含まれていない場合、表示されないこと' do
     fill_in('search_eria', with: 'not-result')
     click_button '検索'
     expect(page).to have_content('食べられる虫がいません。')
