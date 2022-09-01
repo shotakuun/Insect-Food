@@ -19,8 +19,8 @@
         h3.mb-4 = t('.merit1')
         p.sm-font-p-size
           | 普通に美味いです。<br>
-            虫の中にはエビとかナッツに近い虫も存在する。<br>
-            虫自体がカロリーが低めなのでヘルシーな点も嬉しいが、<strong>甲殻類アレルギー</strong>などを持つ人々は、食べることで症状が出る可能性があります。
+            中にはエビとかナッツに近い虫もいます。<br>
+            虫自体がカロリーが低めなのでヘルシーな点も嬉しいですが、<strong>甲殻類アレルギー</strong>などを持つ人々は、食べることで症状が出る可能性があります。
     .row.justify-content-center.mb-5
       .col-lg-4.text-center.order-lg-2
          = image_tag 'undraw_workout_gcgu.svg', size: "200x200", alt: "アイコン", class: 'mt-lg-5 pt-lg-5'
@@ -43,10 +43,10 @@
             観点からも、環境への負荷が少ないと考えられています。
     .border.my-5
     .text-center
-      h1.mb-5.mt-lg-5.sm-h1-size = t('.search_insect')
-    .row.justify-content-center.mb-5.pb-lg-5
+      h1.mb-5.mt-lg-5.sm-h1-size.btn-title = t('.search_insect')
+    .row.justify-content-center.mb-lg-5.pb-lg-5.mb-2
       .col-12.col-lg-3.text-center.layer-eria.position-relative.m-0.p-0.mr-lg-4.mb-4.mb-lg-0
-        = link_to t('.eat_insect'), insects_path, class: 'nav-link border p-3 rounded-pill bg-primary text-light btn-blue circle'
+        = link_to t('.eat_insect'), insects_path, class: 'nav-link border p-lg-3 rounded-pill bg-primary text-light btn-blue circle p-2'
 
       .col-12.col-lg-3.text-center.position-relative.p-0
-        = link_to t('.look_insect'), insect_questions_path, class: 'nav-link border p-3 rounded-pill bg-danger text-light btn-red circle'
+        = link_to t('.look_insect'), insect_questions_path, class: 'nav-link border p-lg-3 rounded-pill bg-danger text-light btn-red circle p-2'

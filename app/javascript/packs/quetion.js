@@ -1,30 +1,25 @@
 document.addEventListener("turbolinks:load", function () {
-  $('#danger-insect').delay(1000).fadeIn(1000)
-  $('#danger-insect').fadeOut(2000)
+  $("#danger-insect").delay(1000).fadeIn(1000);
+  $("#danger-insect").fadeOut(2000);
   // ↑↑↑ 質問文が表示される前に注意文を表示するエリア
 
   // ↓↓↓ 質問文が表示される前に注意文を表示するエリア
-  $('#questions').delay(4000).fadeIn(1000)
+  $("#questions").delay(4000).fadeIn(1000);
 
   const h2 = document.getElementById("h2");
   const ul = document.getElementById("ul");
-  const randomNums = [1, 2, 3, 4, 5];
-  const sortNums = randomNums.sort(() => Math.random() - 0.5);
-  const sliceNums = sortNums.slice(0, 10);
+  const randomNums = [0, 1, 2, 3, 4, 5, 6];
+  const sliceNums = randomNums.sort(() => Math.random() - 0.5);
 
   const lists = [
     {
-      title: "虫好きですよね？",
-      answer: ["めっちゃ好き!", "めっちゃ嫌い！"],
+      title: "虫好き？",
+      answer: ["好き!", "めっちゃ嫌い！"],
     },
-    { title: "最近疲れていますか？", answer: ["疲れてる", "疲れてない"] },
-    {
-      title: "何かしらのエピソードトークが欲しい",
-      answer: ["いますぐ欲しい", "いらないかな..."],
-    },
+    { title: "健康に興味がある？", answer: ["ある!", "全くない！"] },
     {
       title: "朝起きて枕元に虫がいたら？？",
-      answer: ["二度寝する", "マジでびびる"],
+      answer: ["普通に二度寝する！", "焦る!"],
     },
     {
       title: "ブヨブヨ系？ カッチカッチ系？",
@@ -32,7 +27,15 @@ document.addEventListener("turbolinks:load", function () {
     },
     {
       title: "この世に食材が虫しかなかったら？",
-      answer: ["貪り食う", "死を待つ"],
+      answer: ["貪り食う!", "死を待つ!"],
+    },
+    {
+      title: "エピソードトークが欲しい？",
+      answer: ["今すぐ欲しい", "いらない!"],
+    },
+    {
+      title: "変わったことが好き？",
+      answer: ["好き!", "嫌い!"],
     },
   ];
 

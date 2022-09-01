@@ -57,7 +57,7 @@
 
   #danger-insect {
     display: none;
-    padding-top: 230px;
+    padding-top: 180px;
   }
 
   //質問ページ
@@ -76,7 +76,7 @@
   }
 
   #questions {
-    padding-top: 100px;
+    padding-top: 60px;
   }
 
   .q-number {
@@ -88,11 +88,21 @@
   }
 
   #before_h1 {
-    padding-top: 300px;
+    padding-top: 250px;
   }
 
   //結果ページ
   .pc-result-imag {
     display: none;
+  }
+
+  .result-area {
+    display: none;
+    margin-top: 70px;
+  }
+
+  //トップページのボタンエリア
+  .btn-title {
+    font-size: 21px;
   }
 }

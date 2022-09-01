@@ -13,7 +13,6 @@ RSpec.describe 'お気に入りページ', type: :system do
         login(user)
         visit bookmarks_insects_path
         expect(page).to have_content insect.name
-        expect(page).to have_content insect.catch_copy
       end
     end
 
@@ -22,7 +21,6 @@ RSpec.describe 'お気に入りページ', type: :system do
         login(user)
         visit bookmarks_insects_path
         expect(page).not_to have_content insect.name
-        expect(page).not_to have_content insect.catch_copy
         expect(page).to have_content 'お気に入りした虫がいません'
       end
     end
